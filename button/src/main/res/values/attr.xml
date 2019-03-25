@@ -3,6 +3,12 @@
 
     <declare-styleable name="FitButton">
         <attr name="fb_text" format="string|reference" />
+        <!--<attr name="ctl_textSubtitle" format="string|reference" />-->
+        <!--<attr name="ctl_titleTextSize" format="dimension" />-->
+        <!--<attr name="ctl_subtitleTextSize" format="dimension" />-->
+        <!--<attr name="ctl_fontFamily" format="string|reference" />-->
+        <!--<attr name="ctl_titleColor" format="color" />-->
+        <!--<attr name="ctl_subtitleColor" format="color" />-->
     </declare-styleable>
 
 </resources>

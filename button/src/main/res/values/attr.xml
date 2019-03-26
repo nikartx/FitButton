@@ -2,13 +2,70 @@
 <resources>
 
     <declare-styleable name="FitButton">
+        <attr name="fb_image" format="color|reference" />
+        <attr name="fb_imageColor" format="color" />
+        <attr name="fb_imageBackGroundColor" format="color" />
+        <attr name="fb_imageWidth" format="dimension" />
+        <attr name="fb_imageHeight" format="dimension" />
+        <attr name="fb_imagePadding" format="dimension" />
+        <attr name="fb_imagePaddingTop" format="dimension" />
+        <attr name="fb_imagePaddingBottom" format="dimension" />
+        <attr name="fb_imagePaddingStart" format="dimension" />
+        <attr name="fb_imagePaddingEnd" format="dimension" />
+        <attr name="fb_imageGravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="center" value="0x11" />
+            <flag name="center_horizontal" value="0x08" />
+            <flag name="center_vertical" value="0x80" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
+        </attr>
+
+        <attr name="fb_divColor" format="color" />
+        <attr name="fb_divWidth" format="dimension" />
+        <attr name="fb_divHeight" format="dimension" />
+        <attr name="fb_divMarginTop" format="dimension" />
+        <attr name="fb_divMarginBottom" format="dimension" />
+
         <attr name="fb_text" format="string|reference" />
-        <!--<attr name="ctl_textSubtitle" format="string|reference" />-->
-        <!--<attr name="ctl_titleTextSize" format="dimension" />-->
-        <!--<attr name="ctl_subtitleTextSize" format="dimension" />-->
-        <!--<attr name="ctl_fontFamily" format="string|reference" />-->
-        <!--<attr name="ctl_titleColor" format="color" />-->
-        <!--<attr name="ctl_subtitleColor" format="color" />-->
+        <attr name="fb_fontFamily" format="string|reference" />
+        <attr name="fb_textStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="fb_textSize" format="dimension" />
+        <attr name="fb_textColor" format="color" />
+        <attr name="fb_textAllCaps" format="boolean" />
+
+        <attr name="fb_backgroundColor" format="color" />
+        <attr name="fb_cornerRadius" format="dimension" />
+        <attr name="fb_showRipple" format="boolean" />
+        <attr name="fb_shape">
+            <enum name="rectangle" value="0" />
+            <enum name="square" value="1" />
+            <enum name="circle" value="2" />
+        </attr>
+
+        <attr name="fb_imageVisibility">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+            <enum name="gone" value="2" />
+        </attr>
+        <attr name="fb_divVisibility">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+            <enum name="gone" value="2" />
+        </attr>
+        <attr name="fb_textVisibility">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+            <enum name="gone" value="2" />
+        </attr>
+
+        <attr name="fb_borderColor" format="color" />
+        <attr name="fb_borderWidth" format="dimension" />
     </declare-styleable>
 
 </resources>

@@ -14,11 +14,12 @@ data class FButton(
         var imgBackColor: Int = 0,
         var imgWidth: Float = 0f,
         var imgHeight: Float = 0f,
+        var imgPadding: Float = 0f,
         var imgPaddingTop: Float = 0f,
         var imgPaddingBottom: Float = 0f,
         var imgPaddingStart: Float = 0f,
         var imgPaddingEnd: Float = 0f,
-        var imgGravity: Float = 0f,
+        var imgGravity: Int = 0x11, // Center
 
         var divColor: Int = 0,
         var divWidth: Float = 0f,
@@ -29,7 +30,7 @@ data class FButton(
         var text: String? = null,
         var textFont: Typeface? = null,
         var textStyle: Int = 0,
-        var textSize: Int = 0,
+        var textSize: Float = 0f,
         var textColor: Int = 0,
         var textAllCaps: Boolean = false,
 
@@ -38,10 +39,10 @@ data class FButton(
         var showRipple: Boolean = false,
         var btnShape: Shape = Shape.RECTANGLE,
 
-        var borderColor: Int = 0,
-        var borderWidth: Float = 0f,
-
         var imgVisibility: Int = View.VISIBLE,
         var divVisibility: Int = View.GONE,
-        var textVisibility: Int = View.VISIBLE
+        var textVisibility: Int = View.VISIBLE,
+
+        var borderColor: Int = 0,
+        var borderWidth: Float = 0f
 )

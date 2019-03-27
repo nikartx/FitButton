@@ -10,6 +10,5 @@ import com.github.nikartm.button.model.FButton
 internal class IconDrawer(view: View, button: FButton) : Drawer<FButton>(view, button) {
 
     override fun draw() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }

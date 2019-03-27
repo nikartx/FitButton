@@ -71,6 +71,7 @@
             <enum name="rectangle" value="0" />
             <enum name="square" value="1" />
             <enum name="circle" value="2" />
+            <enum name="oval" value="3" />
         </attr>
 
         <!-- Border -->

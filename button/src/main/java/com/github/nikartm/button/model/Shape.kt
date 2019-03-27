@@ -8,5 +8,6 @@ package com.github.nikartm.button.model
 enum class Shape(val position: Int) {
     RECTANGLE(0),
     SQUARE(1),
-    CIRCLE(2)
+    CIRCLE(2),
+    OVAL(3)
 }

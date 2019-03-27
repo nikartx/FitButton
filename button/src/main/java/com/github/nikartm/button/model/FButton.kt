@@ -2,6 +2,7 @@ package com.github.nikartm.button.model
 
 import android.graphics.Typeface
 import android.graphics.drawable.Drawable
+import android.view.Gravity
 import android.view.View
 
 /**
@@ -19,7 +20,7 @@ data class FButton(
         var iconPaddingBottom: Float = 0f,
         var iconPaddingStart: Float = 0f,
         var iconPaddingEnd: Float = 0f,
-        var iconGravity: Int = 0x11, // Center
+        var iconGravity: Int = Gravity.CENTER,
         var iconPosition: IconPosition = IconPosition.LEFT,
         var iconVisibility: Int = View.VISIBLE,
 

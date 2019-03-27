@@ -13,7 +13,7 @@ import com.github.nikartm.button.model.Shape
  * @author Ivan V on 25.03.2019.
  * @version 1.0
  */
-internal class AttributeController(private val view: View, private val attrs: AttributeSet) {
+internal class AttributeController(private val view: View, private val attrs: AttributeSet?) {
 
     /**
      * @return initialized [FButton]

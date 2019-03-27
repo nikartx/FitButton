@@ -1,8 +1,6 @@
 package com.github.nikartm.button
 
 import android.content.Context
-import android.graphics.Color
-import android.graphics.drawable.GradientDrawable
 import android.util.AttributeSet
 import android.widget.LinearLayout
 
@@ -23,7 +21,12 @@ class FitButton : LinearLayout {
     }
 
     private fun bind(attrs: AttributeSet?) {
-        manager = DrawManager(this, attrs).drawButton()
+        manager = DrawManager(this, attrs)
+    }
+
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+        manager.drawButton()
     }
 
 }

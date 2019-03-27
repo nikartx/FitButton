@@ -1,9 +1,9 @@
 package com.github.nikartm.button.drawer
 
 import android.graphics.drawable.GradientDrawable
-import android.util.Log
 import android.view.View
 import com.github.nikartm.button.model.FButton
+import com.github.nikartm.button.model.Shape
 import com.github.nikartm.button.pxToDp
 
 /**
@@ -17,10 +17,28 @@ internal class ContainerDrawer(val view: View, val button: FButton) : Drawer<FBu
     }
 
     private fun drawLayout() {
-        val shape = GradientDrawable()
-        shape.cornerRadius = pxToDp(button.cornerRadius)
-        shape.setColor(button.btnColor)
-        view.background = shape
+        val container = GradientDrawable()
+        container.cornerRadius = pxToDp(button.cornerRadius)
+        container.setColor(button.btnColor)
+        container.setStroke(button.borderWidth.toInt(), button.borderColor)
+        view.background = container
+        drawShape(container)
+    }
+
+    private fun drawShape(container: GradientDrawable) {
+        container.shape = when (button.btnShape) {
+            Shape.RECTANGLE -> GradientDrawable.RECTANGLE
+            Shape.OVAL -> GradientDrawable.OVAL
+            Shape.SQUARE -> alignSides(GradientDrawable.RECTANGLE)
+            Shape.CIRCLE -> alignSides(GradientDrawable.OVAL)
+        }
+    }
+
+    private fun alignSides(shape: Int) : Int {
+        val min = Math.min(view.measuredWidth, view.measuredHeight)
+        view.layoutParams.width = min
+        view.layoutParams.height = min
+        return shape
     }
 
 }

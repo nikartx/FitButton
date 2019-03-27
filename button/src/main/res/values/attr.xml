@@ -3,17 +3,17 @@
 
     <declare-styleable name="FitButton">
         <!-- Image -->
-        <attr name="fb_image" format="color|reference" />
-        <attr name="fb_imageColor" format="color" />
-        <attr name="fb_imageBackGroundColor" format="color" />
-        <attr name="fb_imageWidth" format="dimension" />
-        <attr name="fb_imageHeight" format="dimension" />
-        <attr name="fb_imagePadding" format="dimension" />
-        <attr name="fb_imagePaddingTop" format="dimension" />
-        <attr name="fb_imagePaddingBottom" format="dimension" />
-        <attr name="fb_imagePaddingStart" format="dimension" />
-        <attr name="fb_imagePaddingEnd" format="dimension" />
-        <attr name="fb_imageGravity">
+        <attr name="fb_icon" format="color|reference" />
+        <attr name="fb_iconColor" format="color" />
+        <attr name="fb_iconBackGroundColor" format="color" />
+        <attr name="fb_iconWidth" format="dimension" />
+        <attr name="fb_iconHeight" format="dimension" />
+        <attr name="fb_iconPadding" format="dimension" />
+        <attr name="fb_iconPaddingTop" format="dimension" />
+        <attr name="fb_iconPaddingBottom" format="dimension" />
+        <attr name="fb_iconPaddingStart" format="dimension" />
+        <attr name="fb_iconPaddingEnd" format="dimension" />
+        <attr name="fb_iconGravity">
             <flag name="top" value="0x30" />
             <flag name="bottom" value="0x50" />
             <flag name="center" value="0x11" />
@@ -22,7 +22,13 @@
             <flag name="start" value="0x00800003" />
             <flag name="end" value="0x00800005" />
         </attr>
-        <attr name="fb_imageVisibility">
+        <attr name="fb_iconPosition">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+            <enum name="left" value="2" />
+            <enum name="right" value="3" />
+        </attr>
+        <attr name="fb_iconVisibility">
             <enum name="visible" value="0" />
             <enum name="invisible" value="1" />
             <enum name="gone" value="2" />

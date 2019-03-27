@@ -9,18 +9,19 @@ import android.view.View
  * @version 1.0
  */
 data class FButton(
-        var image: Drawable? = null,
-        var imgColor: Int = 0,
-        var imgBackColor: Int = 0,
-        var imgWidth: Float = 0f,
-        var imgHeight: Float = 0f,
-        var imgPadding: Float = 0f,
-        var imgPaddingTop: Float = 0f,
-        var imgPaddingBottom: Float = 0f,
-        var imgPaddingStart: Float = 0f,
-        var imgPaddingEnd: Float = 0f,
-        var imgGravity: Int = 0x11, // Center
-        var imgVisibility: Int = View.VISIBLE,
+        var icon: Drawable? = null,
+        var iconColor: Int = 0,
+        var iconBackColor: Int = 0,
+        var iconWidth: Float = 0f,
+        var iconHeight: Float = 0f,
+        var iconPadding: Float = 0f,
+        var iconPaddingTop: Float = 0f,
+        var iconPaddingBottom: Float = 0f,
+        var iconPaddingStart: Float = 0f,
+        var iconPaddingEnd: Float = 0f,
+        var iconGravity: Int = 0x11, // Center
+        var iconPosition: IconPosition = IconPosition.LEFT,
+        var iconVisibility: Int = View.VISIBLE,
 
         var divColor: Int = 0,
         var divWidth: Float = 0f,

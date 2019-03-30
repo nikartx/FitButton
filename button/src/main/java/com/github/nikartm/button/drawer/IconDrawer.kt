@@ -35,6 +35,7 @@ internal class IconDrawer(val view: FitButton, val button: FButton)
             IconPosition.TOP, IconPosition.BOTTOM -> drawIconTopBottom()
             else -> drawIconCenter()
         }
+        fl.setBackgroundColor(button.iconBackColor)
     }
 
     // Prepare icon to the drawing
@@ -42,6 +43,18 @@ internal class IconDrawer(val view: FitButton, val button: FButton)
         iv = ImageView(view.context)
         iv.setImageDrawable(button.icon)
         iv.setColorFilter(button.iconColor)
+        iv.visibility = button.iconVisibility
+        if (button.iconPadding == 0f) {
+            iv.setPadding(button.iconPaddingStart.toInt(),
+                    button.iconPaddingTop.toInt(),
+                    button.iconPaddingEnd.toInt(),
+                    button.iconPaddingBottom.toInt())
+        } else {
+            iv.setPadding(button.iconPadding.toInt(),
+                    button.iconPadding.toInt(),
+                    button.iconPadding.toInt(),
+                    button.iconPadding.toInt())
+        }
         val iconParams = FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.WRAP_CONTENT,
                 FrameLayout.LayoutParams.WRAP_CONTENT)

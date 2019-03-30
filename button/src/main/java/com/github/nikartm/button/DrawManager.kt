@@ -12,7 +12,7 @@ import com.github.nikartm.button.model.FButton
  * @author Ivan V on 25.03.2019.
  * @version 1.0
  */
-internal class DrawManager constructor(view: View, attrs : AttributeSet?) {
+internal class DrawManager constructor(view: FitButton, attrs : AttributeSet?) {
 
     private val controller = AttributeController(view, attrs)
 
@@ -22,7 +22,7 @@ internal class DrawManager constructor(view: View, attrs : AttributeSet?) {
     private val text = TextDrawer(view, controller.button)
 
     companion object Create {
-        fun init(view: View, attrs : AttributeSet): DrawManager {
+        fun init(view: FitButton, attrs : AttributeSet): DrawManager {
             return DrawManager(view, attrs)
         }
     }

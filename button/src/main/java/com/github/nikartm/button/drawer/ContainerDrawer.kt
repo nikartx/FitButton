@@ -1,7 +1,7 @@
 package com.github.nikartm.button.drawer
 
 import android.graphics.drawable.GradientDrawable
-import android.view.View
+import com.github.nikartm.button.FitButton
 import com.github.nikartm.button.model.FButton
 import com.github.nikartm.button.model.Shape
 import com.github.nikartm.button.pxToDp
@@ -10,7 +10,8 @@ import com.github.nikartm.button.pxToDp
  * @author Ivan V on 27.03.2019.
  * @version 1.0
  */
-internal class ContainerDrawer(val view: View, val button: FButton) : Drawer<FButton>(view, button) {
+internal class ContainerDrawer(val view: FitButton, val button: FButton)
+    : Drawer<FitButton, FButton>(view, button) {
 
     override fun draw() {
         drawLayout()

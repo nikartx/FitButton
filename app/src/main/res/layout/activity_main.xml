@@ -5,17 +5,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     tools:context=".MainActivity">
 
     <com.github.nikartm.button.FitButton
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
         android:layout_margin="32dp"
         app:fb_backgroundColor="@color/colorAccent"
         app:fb_cornerRadius="20dp"
         app:fb_borderWidth="3dp"
-        app:fb_shape="square"
+        app:fb_shape="rectangle"
+        app:fb_iconWidth="30dp"
+        app:fb_iconHeight="30dp"
+        app:fb_iconGravity=""
+        app:fb_iconPosition="left"
+        app:fb_icon="@drawable/ic_thumb_up"
+        app:fb_iconColor="@color/colorPrimaryDark"
         app:fb_borderColor="@color/colorPrimary"
         app:fb_text="Test fit button"/>
 

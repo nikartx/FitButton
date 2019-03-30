@@ -21,7 +21,7 @@ data class FButton(
         var iconPaddingStart: Float = 0f,
         var iconPaddingEnd: Float = 0f,
         var iconGravity: Int = Gravity.CENTER,
-        var iconPosition: IconPosition = IconPosition.LEFT,
+        var iconPosition: IconPosition = IconPosition.CENTER,
         var iconVisibility: Int = View.VISIBLE,
 
         var divColor: Int = 0,

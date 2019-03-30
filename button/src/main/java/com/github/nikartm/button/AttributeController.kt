@@ -42,7 +42,7 @@ internal class AttributeController(private val view: View, private val attrs: At
         val iconPaddingStart = typedArray.getDimension(R.styleable.FitButton_fb_iconPaddingStart, 0f)
         val iconPaddingEnd = typedArray.getDimension(R.styleable.FitButton_fb_iconPaddingEnd, 0f)
         val iconGravity = typedArray.getInt(R.styleable.FitButton_fb_iconGravity, Gravity.CENTER)
-        val iconPosition = typedArray.getInt(R.styleable.FitButton_fb_iconPosition, IconPosition.LEFT.position)
+        val iconPosition = typedArray.getInt(R.styleable.FitButton_fb_iconPosition, IconPosition.CENTER.position)
         val iconVisibility = typedArray.getInt(R.styleable.FitButton_fb_iconVisibility, View.VISIBLE)
 
         // Init divider

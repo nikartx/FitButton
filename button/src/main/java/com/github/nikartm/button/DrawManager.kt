@@ -32,9 +32,15 @@ internal class DrawManager constructor(view: FitButton, attrs : AttributeSet?) {
      */
     fun drawButton() : DrawManager {
         container.draw()
-        icon.draw()
-        divider.draw()
-        text.draw()
+        if (icon.isReady()) {
+            icon.draw()
+        }
+        if (divider.isReady()) {
+            divider.draw()
+        }
+        if (text.isReady()) {
+            text.draw()
+        }
         return this
     }
 

@@ -12,4 +12,8 @@ internal class DividerDrawer(view: FitButton, button: FButton)
 
     override fun draw() {
     }
+
+    override fun isReady(): Boolean {
+        return false
+    }
 }

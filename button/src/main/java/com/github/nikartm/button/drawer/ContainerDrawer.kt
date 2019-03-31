@@ -17,6 +17,10 @@ internal class ContainerDrawer(val view: FitButton, val button: FButton)
         drawLayout()
     }
 
+    override fun isReady(): Boolean {
+        return true
+    }
+
     private fun drawLayout() {
         val container = GradientDrawable()
         container.cornerRadius = pxToDp(button.cornerRadius)

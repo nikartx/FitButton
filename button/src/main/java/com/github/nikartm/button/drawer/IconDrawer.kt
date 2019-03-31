@@ -1,7 +1,9 @@
 package com.github.nikartm.button.drawer
 
+import android.opengl.Visibility
 import android.text.TextUtils
 import android.view.Gravity
+import android.view.View
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.FrameLayout
@@ -25,6 +27,10 @@ internal class IconDrawer(val view: FitButton, val button: FButton)
         prepareIconLayout()
         fl.addView(getIcon())
         view.addView(fl)
+    }
+
+    override fun isReady(): Boolean {
+        return button.icon != null && button.iconVisibility == View.VISIBLE
     }
 
     private fun prepareIconLayout() {

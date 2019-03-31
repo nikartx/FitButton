@@ -1,6 +1,8 @@
 package com.github.nikartm.button.drawer
 
 import android.graphics.Typeface
+import android.text.TextUtils
+import android.view.View
 import android.widget.TextView
 import com.github.nikartm.button.FitButton
 import com.github.nikartm.button.getDensity
@@ -24,6 +26,11 @@ internal class TextDrawer(val view: FitButton, val button: FButton)
         tv.isAllCaps = button.textAllCaps
         tv.visibility = button.textVisibility
         view.addView(tv)
+    }
+
+    override fun isReady(): Boolean {
+        return !TextUtils.isEmpty(button.text) && button.textVisibility == View.VISIBLE
+
     }
 
 }

@@ -32,9 +32,9 @@ data class FButton(
         var divVisibility: Int = View.GONE,
 
         var text: String? = null,
-        var textFont: Typeface? = null,
-        var textStyle: Int = 0,
-        var textSize: Float = 0f,
+        var textFont: Typeface? = Typeface.DEFAULT,
+        var textStyle: Int = Typeface.NORMAL,
+        var textSize: Float = 16f,
         var textColor: Int = 0,
         var textAllCaps: Boolean = false,
         var textVisibility: Int = View.VISIBLE,

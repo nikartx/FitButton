@@ -7,6 +7,7 @@ import com.github.nikartm.button.drawer.DividerDrawer
 import com.github.nikartm.button.drawer.IconDrawer
 import com.github.nikartm.button.drawer.TextDrawer
 import com.github.nikartm.button.model.FButton
+import com.github.nikartm.button.model.IconPosition
 
 /**
  * @author Ivan V on 25.03.2019.
@@ -32,15 +33,7 @@ internal class DrawManager constructor(view: FitButton, attrs : AttributeSet?) {
      */
     fun drawButton() : DrawManager {
         container.draw()
-        if (icon.isReady()) {
-            icon.draw()
-        }
-        if (divider.isReady()) {
-            divider.draw()
-        }
-        if (text.isReady()) {
-            text.draw()
-        }
+        defineDrawingOrder()
         return this
     }
 
@@ -49,6 +42,33 @@ internal class DrawManager constructor(view: FitButton, attrs : AttributeSet?) {
      */
     fun getButton() : FButton {
         return controller.button
+    }
+
+    private fun defineDrawingOrder() {
+        val icPosition: IconPosition = getButton().iconPosition
+        if (icon.isReady()) {
+            if (IconPosition.LEFT == icPosition || IconPosition.TOP == icPosition) {
+                icon.draw()
+                if (divider.isReady()) {
+                    divider.draw()
+                }
+                if (text.isReady()) {
+                    text.draw()
+                }
+            } else {
+                if (text.isReady()) {
+                    text.draw()
+                }
+                if (divider.isReady()) {
+                    divider.draw()
+                }
+                icon.draw()
+            }
+        } else{
+            if (text.isReady()) {
+                text.draw()
+            }
+        }
     }
 
 }

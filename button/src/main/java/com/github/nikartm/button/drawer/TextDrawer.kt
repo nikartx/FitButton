@@ -2,6 +2,7 @@ package com.github.nikartm.button.drawer
 
 import android.graphics.Typeface
 import android.text.TextUtils
+import android.view.Gravity
 import android.view.View
 import android.widget.TextView
 import com.github.nikartm.button.FitButton
@@ -25,6 +26,8 @@ internal class TextDrawer(val view: FitButton, val button: FButton)
         tv.setTextColor(button.textColor)
         tv.isAllCaps = button.textAllCaps
         tv.visibility = button.textVisibility
+        tv.gravity = Gravity.CENTER
+        view.gravity = Gravity.CENTER
         view.addView(tv)
     }
 

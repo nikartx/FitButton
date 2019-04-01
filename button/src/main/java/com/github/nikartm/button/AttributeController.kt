@@ -51,6 +51,8 @@ internal class AttributeController(private val view: View, private val attrs: At
         val divHeight = typedArray.getDimension(R.styleable.FitButton_fb_divHeight, 0f)
         val divMarginTop = typedArray.getDimension(R.styleable.FitButton_fb_divMarginTop, 0f)
         val divMarginBottom = typedArray.getDimension(R.styleable.FitButton_fb_divMarginBottom, 0f)
+        val divMarginStart = typedArray.getDimension(R.styleable.FitButton_fb_divMarginStart, 0f)
+        val divMarginEnd = typedArray.getDimension(R.styleable.FitButton_fb_divMarginEnd, 0f)
         val divVisibility = typedArray.getInt(R.styleable.FitButton_fb_divVisibility, View.VISIBLE)
 
         // Init button text
@@ -67,7 +69,7 @@ internal class AttributeController(private val view: View, private val attrs: At
         val btnColor = typedArray.getColor(R.styleable.FitButton_fb_backgroundColor, 0)
         val cornerRadius = typedArray.getDimension(R.styleable.FitButton_fb_cornerRadius, 0f)
         val showRipple = typedArray.getBoolean(R.styleable.FitButton_fb_showRipple, true)
-        val shape = typedArray.getInt(R.styleable.FitButton_fb_shape, Shape.RECTANGLE.position)
+        val shape = typedArray.getInt(R.styleable.FitButton_fb_shape, Shape.RECTANGLE.shape)
 
         // Init border
         val borderColor = typedArray.getColor(R.styleable.FitButton_fb_borderColor, Color.TRANSPARENT)
@@ -91,6 +93,8 @@ internal class AttributeController(private val view: View, private val attrs: At
                 divHeight,
                 divMarginTop,
                 divMarginBottom,
+                divMarginStart,
+                divMarginEnd,
                 divVisibility,
                 text,
                 textFont,
@@ -102,7 +106,7 @@ internal class AttributeController(private val view: View, private val attrs: At
                 btnColor,
                 cornerRadius,
                 showRipple,
-                Shape.values().first { s -> s.position == shape },
+                Shape.values().first { s -> s.shape == shape },
                 borderColor,
                 borderWidth)
 

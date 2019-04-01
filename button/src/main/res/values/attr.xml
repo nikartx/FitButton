@@ -41,6 +41,8 @@
         <attr name="fb_divHeight" format="dimension" />
         <attr name="fb_divMarginTop" format="dimension" />
         <attr name="fb_divMarginBottom" format="dimension" />
+        <attr name="fb_divMarginStart" format="dimension" />
+        <attr name="fb_divMarginEnd" format="dimension" />
         <attr name="fb_divVisibility">
             <enum name="visible" value="0" />
             <enum name="invisible" value="1" />

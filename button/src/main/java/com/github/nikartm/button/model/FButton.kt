@@ -29,7 +29,9 @@ data class FButton(
         var divHeight: Float = 0f,
         var divMarginTop: Float = 0f,
         var divMarginBottom: Float = 0f,
-        var divVisibility: Int = View.GONE,
+        var divMarginStart: Float = 0f,
+        var divMarginEnd: Float = 0f,
+        var divVisibility: Int = View.VISIBLE,
 
         var text: String? = null,
         var textFont: Typeface? = Typeface.DEFAULT,

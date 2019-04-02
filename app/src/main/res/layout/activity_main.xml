@@ -12,7 +12,6 @@
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:layout_margin="32dp"
-        android:padding="16sp"
         app:fb_backgroundColor="@color/colorAccent"
         app:fb_cornerRadius="20dp"
         app:fb_borderWidth="3dp"
@@ -20,10 +19,9 @@
         app:fb_iconWidth="24dp"
         app:fb_iconHeight="24dp"
         app:fb_iconPosition="left"
-        app:fb_gravity="center"
+        app:fb_gravity="center|start"
         app:fb_divColor="#fff"
         app:fb_divWidth="1dp"
-        app:fb_divHeight="50dp"
         app:fb_iconMarginStart="16dp"
         app:fb_iconMarginEnd="16dp"
         app:fb_icon="@drawable/ic_thumb_up"
@@ -32,6 +30,6 @@
         app:fb_textPaddingStart="16dp"
         app:fb_textPaddingEnd="16dp"
         app:fb_textColor="#FFF"
-        app:fb_text="Test button"/>
+        app:fb_text="Test "/>
 
 </LinearLayout>

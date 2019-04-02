@@ -3,6 +3,7 @@ package com.github.nikartm.button.drawer
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
+import android.widget.LinearLayout
 import com.github.nikartm.button.FitButton
 import com.github.nikartm.button.model.FButton
 
@@ -22,23 +23,29 @@ internal class DividerDrawer(val view: FitButton, val button: FButton)
     }
 
     override fun isReady(): Boolean {
-        return button.divWidth != 0f
-                && button.divHeight != 0f
-                && button.divVisibility != View.GONE
+        return button.divVisibility != View.GONE
     }
 
     private fun initDivider() {
         div = View(view.context)
         div.setBackgroundColor(button.divColor)
+        div.visibility = button.divVisibility
         divParams = ViewGroup.MarginLayoutParams(WRAP_CONTENT, WRAP_CONTENT)
-        divParams.width = button.divWidth.toInt()
-        divParams.height = button.divHeight.toInt()
+        if (button.divHeight == 0f && view.orientation == LinearLayout.HORIZONTAL) {
+            divParams.height = (view.measuredHeight - (button.borderWidth * 2f).toInt())
+        } else {
+            divParams.height = button.divHeight.toInt()
+        }
+        if (button.divWidth == 0f && view.orientation == LinearLayout.VERTICAL) {
+            divParams.width = (view.measuredWidth - (button.borderWidth * 2f).toInt())
+        } else {
+            divParams.width = button.divWidth.toInt()
+        }
         divParams.marginStart = button.divMarginStart.toInt()
         divParams.topMargin = button.divMarginTop.toInt()
         divParams.marginEnd = button.divMarginEnd.toInt()
         divParams.bottomMargin = button.divMarginBottom.toInt()
         div.layoutParams = divParams
-        div.visibility = button.divVisibility
     }
 
 }

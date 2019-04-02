@@ -36,7 +36,7 @@ internal class TextDrawer(val view: FitButton, val button: FButton)
     }
 
     override fun isReady(): Boolean {
-        return !TextUtils.isEmpty(button.text) && button.textVisibility == View.VISIBLE
+        return !TextUtils.isEmpty(button.text) && button.textVisibility != View.GONE
     }
 
 }

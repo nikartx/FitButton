@@ -20,9 +20,9 @@
             <enum name="center" value="4" />
         </attr>
         <attr name="fb_iconVisibility">
-            <enum name="visible" value="0" />
-            <enum name="invisible" value="1" />
-            <enum name="gone" value="2" />
+            <enum name="visible" value="0x00000000" />
+            <enum name="invisible" value="0x00000004" />
+            <enum name="gone" value="0x00000008" />
         </attr>
 
         <!-- Divider -->
@@ -34,9 +34,9 @@
         <attr name="fb_divMarginStart" format="dimension" />
         <attr name="fb_divMarginEnd" format="dimension" />
         <attr name="fb_divVisibility">
-            <enum name="visible" value="0" />
-            <enum name="invisible" value="1" />
-            <enum name="gone" value="2" />
+            <enum name="visible" value="0x00000000" />
+            <enum name="invisible" value="0x00000004" />
+            <enum name="gone" value="0x00000008" />
         </attr>
 
         <!-- Text -->
@@ -55,9 +55,9 @@
         <attr name="fb_textColor" format="color" />
         <attr name="fb_textAllCaps" format="boolean" />
         <attr name="fb_textVisibility">
-            <enum name="visible" value="0" />
-            <enum name="invisible" value="1" />
-            <enum name="gone" value="2" />
+            <enum name="visible" value="0x00000000" />
+            <enum name="invisible" value="0x00000004" />
+            <enum name="gone" value="0x00000008" />
         </attr>
 
         <!-- Button -->

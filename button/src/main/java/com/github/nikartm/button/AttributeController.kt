@@ -36,12 +36,10 @@ internal class AttributeController(private val view: View, private val attrs: At
         val iconHeight = typedArray.getDimension(
                 R.styleable.FitButton_fb_iconHeight, icon?.intrinsicHeight?.toFloat() ?: 0f
         )
-        val iconPadding = typedArray.getDimension(R.styleable.FitButton_fb_iconPadding, 0f)
-        val iconPaddingTop = typedArray.getDimension(R.styleable.FitButton_fb_iconPaddingTop, 0f)
-        val iconPaddingBottom = typedArray.getDimension(R.styleable.FitButton_fb_iconPaddingBottom, 0f)
-        val iconPaddingStart = typedArray.getDimension(R.styleable.FitButton_fb_iconPaddingStart, 0f)
-        val iconPaddingEnd = typedArray.getDimension(R.styleable.FitButton_fb_iconPaddingEnd, 0f)
-        val iconGravity = typedArray.getInt(R.styleable.FitButton_fb_iconGravity, Gravity.CENTER)
+        val iconMarginStart = typedArray.getDimension(R.styleable.FitButton_fb_iconMarginStart, 0f)
+        val iconMarginTop = typedArray.getDimension(R.styleable.FitButton_fb_iconMarginTop, 0f)
+        val iconMarginEnd = typedArray.getDimension(R.styleable.FitButton_fb_iconMarginEnd, 0f)
+        val iconMarginBottom = typedArray.getDimension(R.styleable.FitButton_fb_iconMarginBottom, 0f)
         val iconPosition = typedArray.getInt(R.styleable.FitButton_fb_iconPosition, IconPosition.CENTER.position)
         val iconVisibility = typedArray.getInt(R.styleable.FitButton_fb_iconVisibility, View.VISIBLE)
 
@@ -57,6 +55,10 @@ internal class AttributeController(private val view: View, private val attrs: At
 
         // Init button text
         val text = typedArray.getString(R.styleable.FitButton_fb_text)
+        val textPaddingStart = typedArray.getDimension(R.styleable.FitButton_fb_textPaddingStart, 0f)
+        val textPaddingTop = typedArray.getDimension(R.styleable.FitButton_fb_textPaddingTop, 0f)
+        val textPaddingEnd = typedArray.getDimension(R.styleable.FitButton_fb_textPaddingEnd, 0f)
+        val textPaddingBottom = typedArray.getDimension(R.styleable.FitButton_fb_textPaddingBottom, 0f)
         val fontPath = typedArray.getString(R.styleable.FitButton_fb_fontFamily)
         val textFont = if (fontPath != null) Typeface.createFromFile(fontPath) else Typeface.DEFAULT
         val textStyle = typedArray.getInt(R.styleable.FitButton_fb_textStyle, Typeface.NORMAL)
@@ -70,6 +72,7 @@ internal class AttributeController(private val view: View, private val attrs: At
         val cornerRadius = typedArray.getDimension(R.styleable.FitButton_fb_cornerRadius, 0f)
         val showRipple = typedArray.getBoolean(R.styleable.FitButton_fb_showRipple, true)
         val shape = typedArray.getInt(R.styleable.FitButton_fb_shape, Shape.RECTANGLE.shape)
+        val gravity = typedArray.getInt(R.styleable.FitButton_fb_gravity, Gravity.CENTER)
 
         // Init border
         val borderColor = typedArray.getColor(R.styleable.FitButton_fb_borderColor, Color.TRANSPARENT)
@@ -80,12 +83,10 @@ internal class AttributeController(private val view: View, private val attrs: At
                 iconBackColor,
                 iconWidth,
                 iconHeight,
-                iconPadding,
-                iconPaddingTop,
-                iconPaddingBottom,
-                iconPaddingStart,
-                iconPaddingEnd,
-                iconGravity,
+                iconMarginStart,
+                iconMarginTop,
+                iconMarginEnd,
+                iconMarginBottom,
                 IconPosition.values().first { ic -> ic.position == iconPosition },
                 iconVisibility,
                 divColor,
@@ -97,6 +98,10 @@ internal class AttributeController(private val view: View, private val attrs: At
                 divMarginEnd,
                 divVisibility,
                 text,
+                textPaddingStart,
+                textPaddingTop,
+                textPaddingEnd,
+                textPaddingBottom,
                 textFont,
                 textStyle,
                 textSize,
@@ -107,6 +112,7 @@ internal class AttributeController(private val view: View, private val attrs: At
                 cornerRadius,
                 showRipple,
                 Shape.values().first { s -> s.shape == shape },
+                gravity,
                 borderColor,
                 borderWidth)
 

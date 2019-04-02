@@ -15,12 +15,10 @@ data class FButton(
         var iconBackColor: Int = 0,
         var iconWidth: Float = 0f,
         var iconHeight: Float = 0f,
-        var iconPadding: Float = 0f,
-        var iconPaddingTop: Float = 0f,
-        var iconPaddingBottom: Float = 0f,
-        var iconPaddingStart: Float = 0f,
-        var iconPaddingEnd: Float = 0f,
-        var iconGravity: Int = Gravity.CENTER,
+        var iconMarginStart: Float = 0f,
+        var iconMarginTop: Float = 0f,
+        var iconMarginEnd: Float = 0f,
+        var iconMarginBottom: Float = 0f,
         var iconPosition: IconPosition = IconPosition.CENTER,
         var iconVisibility: Int = View.VISIBLE,
 
@@ -34,6 +32,10 @@ data class FButton(
         var divVisibility: Int = View.VISIBLE,
 
         var text: String? = null,
+        var textPaddingStart: Float = 0f,
+        var textPaddingTop: Float = 0f,
+        var textPaddingEnd: Float = 0f,
+        var textPaddingBottom: Float = 0f,
         var textFont: Typeface? = Typeface.DEFAULT,
         var textStyle: Int = Typeface.NORMAL,
         var textSize: Float = 16f,
@@ -45,7 +47,7 @@ data class FButton(
         var cornerRadius: Float = 0f,
         var showRipple: Boolean = false,
         var btnShape: Shape = Shape.RECTANGLE,
-
+        var gravity: Int = Gravity.CENTER,
         var borderColor: Int = 0,
         var borderWidth: Float = 0f
 )

@@ -8,20 +8,10 @@
         <attr name="fb_iconBackGroundColor" format="color" />
         <attr name="fb_iconWidth" format="dimension" />
         <attr name="fb_iconHeight" format="dimension" />
-        <attr name="fb_iconPadding" format="dimension" />
-        <attr name="fb_iconPaddingTop" format="dimension" />
-        <attr name="fb_iconPaddingBottom" format="dimension" />
-        <attr name="fb_iconPaddingStart" format="dimension" />
-        <attr name="fb_iconPaddingEnd" format="dimension" />
-        <attr name="fb_iconGravity">
-            <flag name="top" value="0x30" />
-            <flag name="bottom" value="0x50" />
-            <flag name="center" value="0x11" />
-            <flag name="center_horizontal" value="0x08" />
-            <flag name="center_vertical" value="0x80" />
-            <flag name="start" value="0x00800003" />
-            <flag name="end" value="0x00800005" />
-        </attr>
+        <attr name="fb_iconMarginStart" format="dimension" />
+        <attr name="fb_iconMarginTop" format="dimension" />
+        <attr name="fb_iconMarginEnd" format="dimension" />
+        <attr name="fb_iconMarginBottom" format="dimension" />
         <attr name="fb_iconPosition">
             <enum name="top" value="0" />
             <enum name="bottom" value="1" />
@@ -51,6 +41,10 @@
 
         <!-- Text -->
         <attr name="fb_text" format="string|reference" />
+        <attr name="fb_textPaddingStart" format="dimension" />
+        <attr name="fb_textPaddingTop" format="dimension" />
+        <attr name="fb_textPaddingEnd" format="dimension" />
+        <attr name="fb_textPaddingBottom" format="dimension" />
         <attr name="fb_fontFamily" format="string|reference" />
         <attr name="fb_textStyle">
             <flag name="normal" value="0" />
@@ -75,6 +69,13 @@
             <enum name="square" value="1" />
             <enum name="circle" value="2" />
             <enum name="oval" value="3" />
+        </attr>
+        <attr name="fb_gravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="center" value="0x11" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
         </attr>
 
         <!-- Border -->

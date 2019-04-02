@@ -27,13 +27,16 @@ internal class TextDrawer(val view: FitButton, val button: FButton)
         tv.isAllCaps = button.textAllCaps
         tv.visibility = button.textVisibility
         tv.gravity = Gravity.CENTER
-        view.gravity = Gravity.CENTER
+        if (button.icon == null || button.iconVisibility == View.GONE) {
+            view.gravity = Gravity.CENTER
+        }
+        tv.setPadding(button.textPaddingStart.toInt(), button.textPaddingTop.toInt(),
+                button.textPaddingEnd.toInt(), button.textPaddingBottom.toInt())
         view.addView(tv)
     }
 
     override fun isReady(): Boolean {
         return !TextUtils.isEmpty(button.text) && button.textVisibility == View.VISIBLE
-
     }
 
 }

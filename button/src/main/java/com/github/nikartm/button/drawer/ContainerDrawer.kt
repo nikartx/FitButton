@@ -27,6 +27,7 @@ internal class ContainerDrawer(val view: FitButton, val button: FButton)
         container.setColor(button.btnColor)
         container.setStroke(button.borderWidth.toInt(), button.borderColor)
         view.background = container
+        view.gravity = button.gravity
         drawShape(container)
     }
 

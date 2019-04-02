@@ -34,7 +34,6 @@ internal class IconDrawer(val view: FitButton, val button: FButton)
     }
 
     private fun prepareIconLayout() {
-        view.gravity = Gravity.CENTER
         fl = FrameLayout(view.context)
         fl.layoutParams = when (button.iconPosition) {
             IconPosition.LEFT, IconPosition.RIGHT -> drawIconLeftRight()
@@ -50,35 +49,28 @@ internal class IconDrawer(val view: FitButton, val button: FButton)
         iv.setImageDrawable(button.icon)
         iv.setColorFilter(button.iconColor)
         iv.visibility = button.iconVisibility
-        if (button.iconPadding == 0f) {
-            iv.setPadding(button.iconPaddingStart.toInt(),
-                    button.iconPaddingTop.toInt(),
-                    button.iconPaddingEnd.toInt(),
-                    button.iconPaddingBottom.toInt())
-        } else {
-            iv.setPadding(button.iconPadding.toInt(),
-                    button.iconPadding.toInt(),
-                    button.iconPadding.toInt(),
-                    button.iconPadding.toInt())
-        }
         val iconParams = FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.WRAP_CONTENT,
-                FrameLayout.LayoutParams.WRAP_CONTENT)
-        iconParams.gravity = button.iconGravity
+                FrameLayout.LayoutParams.WRAP_CONTENT,
+                button.gravity)
         iconParams.width = button.iconWidth.toInt()
         iconParams.height = button.iconHeight.toInt()
+        iconParams.marginStart = button.iconMarginStart.toInt()
+        iconParams.topMargin = button.iconMarginTop.toInt()
+        iconParams.marginEnd = button.iconMarginEnd.toInt()
+        iconParams.bottomMargin = button.iconMarginBottom.toInt()
         iv.layoutParams = iconParams
         return iv
     }
 
     private fun drawIconLeftRight() : FrameLayout.LayoutParams {
         view.orientation = LinearLayout.HORIZONTAL
-        return FrameLayout.LayoutParams(WRAP_CONTENT, MATCH_PARENT)
+        return FrameLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
     }
 
     private fun drawIconTopBottom() : FrameLayout.LayoutParams {
         view.orientation = LinearLayout.VERTICAL
-        return FrameLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT)
+        return FrameLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
     }
 
     private fun drawIconCenter() : FrameLayout.LayoutParams {
@@ -88,7 +80,7 @@ internal class IconDrawer(val view: FitButton, val button: FButton)
         } else{
             FrameLayout.LayoutParams(WRAP_CONTENT, MATCH_PARENT)
         }
-        params.gravity = button.iconGravity
+        params.gravity = button.gravity
         return params
     }
 

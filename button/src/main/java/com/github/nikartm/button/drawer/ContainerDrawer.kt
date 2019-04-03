@@ -1,8 +1,12 @@
 package com.github.nikartm.button.drawer
 
 import android.graphics.drawable.GradientDrawable
+import android.view.Gravity
+import android.view.View
+import android.widget.LinearLayout
 import com.github.nikartm.button.FitButton
 import com.github.nikartm.button.model.FButton
+import com.github.nikartm.button.model.IconPosition
 import com.github.nikartm.button.model.Shape
 import com.github.nikartm.button.pxToDp
 
@@ -28,7 +32,18 @@ internal class ContainerDrawer(val view: FitButton, val button: FButton)
         container.setStroke(button.borderWidth.toInt(), button.borderColor)
         view.background = container
         view.gravity = button.gravity
+        if (button.icon == null || button.iconVisibility == View.GONE) {
+            view.gravity = Gravity.CENTER
+        }
+        setOrientation()
         drawShape(container)
+    }
+
+    private fun setOrientation() {
+        view.orientation = when (button.iconPosition) {
+            IconPosition.LEFT, IconPosition.RIGHT -> LinearLayout.HORIZONTAL
+            else -> LinearLayout.VERTICAL
+        }
     }
 
     private fun drawShape(container: GradientDrawable) {

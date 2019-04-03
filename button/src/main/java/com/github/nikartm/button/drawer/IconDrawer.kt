@@ -23,8 +23,7 @@ internal class IconDrawer(val view: FitButton, val button: FButton)
     }
 
     override fun isReady(): Boolean {
-        return button.icon != null && (button.iconVisibility == View.VISIBLE
-                || button.iconVisibility == View.INVISIBLE)
+        return button.icon != null && button.iconVisibility != View.GONE
     }
 
     // Prepare icon to the drawing

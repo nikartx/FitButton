@@ -18,8 +18,8 @@
         app:fb_shape="rectangle"
         app:fb_iconWidth="24dp"
         app:fb_iconHeight="24dp"
-        app:fb_iconPosition="top"
-        app:fb_gravity="center"
+        app:fb_iconPosition="left"
+        app:fb_gravity="start|center"
         app:fb_divColor="#fff"
         app:fb_divHeight="1dp"
         app:fb_iconMarginStart="12dp"
@@ -31,6 +31,6 @@
         app:fb_textPaddingEnd="16dp"
         app:fb_textColor="#FFF"
         app:fb_textGravity="center"
-        app:fb_text="Test button"/>
+        app:fb_text="Test button" />
 
 </LinearLayout>

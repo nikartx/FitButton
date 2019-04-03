@@ -7,7 +7,7 @@ import com.github.nikartm.button.FitButton
 import com.github.nikartm.button.model.FButton
 import com.github.nikartm.button.model.IconPosition
 import com.github.nikartm.button.model.Shape
-import com.github.nikartm.button.pxToDp
+import com.github.nikartm.button.util.pxToDp
 import com.github.nikartm.button.util.RippleEffect
 
 /**

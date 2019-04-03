@@ -8,7 +8,7 @@ import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.github.nikartm.button.FitButton
-import com.github.nikartm.button.getDensity
+import com.github.nikartm.button.util.getDensity
 import com.github.nikartm.button.model.FButton
 
 /**

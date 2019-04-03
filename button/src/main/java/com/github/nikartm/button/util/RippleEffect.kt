@@ -7,7 +7,6 @@ import android.graphics.drawable.RippleDrawable
 import android.graphics.drawable.StateListDrawable
 import android.os.Build
 import android.view.View
-import com.github.nikartm.button.pxToDp
 
 /**
  * Ripple effect for the [FitButton]

@@ -1,4 +1,4 @@
-package com.github.nikartm.button
+package com.github.nikartm.button.util
 
 import android.content.res.Resources
 import android.util.TypedValue

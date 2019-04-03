@@ -29,7 +29,6 @@ internal class AttributeController(private val view: View, private val attrs: At
         // Init button image
         val icon = typedArray.getDrawable(R.styleable.FitButton_fb_icon)
         val iconColor = typedArray.getColor(R.styleable.FitButton_fb_iconColor, Color.TRANSPARENT)
-        val iconBackColor = typedArray.getColor(R.styleable.FitButton_fb_iconBackGroundColor, 0)
         val iconWidth = typedArray.getDimension(
                 R.styleable.FitButton_fb_iconWidth, icon?.intrinsicWidth?.toFloat() ?: 0f
         )
@@ -81,7 +80,6 @@ internal class AttributeController(private val view: View, private val attrs: At
 
         button = FButton(icon,
                 iconColor,
-                iconBackColor,
                 iconWidth,
                 iconHeight,
                 iconMarginStart,

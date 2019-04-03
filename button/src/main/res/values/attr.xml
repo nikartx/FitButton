@@ -5,7 +5,6 @@
         <!-- Image -->
         <attr name="fb_icon" format="color|reference" />
         <attr name="fb_iconColor" format="color" />
-        <attr name="fb_iconBackGroundColor" format="color" />
         <attr name="fb_iconWidth" format="dimension" />
         <attr name="fb_iconHeight" format="dimension" />
         <attr name="fb_iconMarginStart" format="dimension" />

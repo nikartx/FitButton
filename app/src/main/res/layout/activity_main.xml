@@ -29,7 +29,6 @@
         app:fb_borderColor="@color/colorPrimary"
         app:fb_textPaddingStart="16dp"
         app:fb_textPaddingEnd="16dp"
-        app:fb_iconBackGroundColor="#888"
         app:fb_textColor="#FFF"
         app:fb_textGravity="center"
         app:fb_text="Test button"/>

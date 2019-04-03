@@ -12,7 +12,6 @@ import android.view.View
 data class FButton(
         var icon: Drawable? = null,
         var iconColor: Int = 0,
-        var iconBackColor: Int = 0,
         var iconWidth: Float = 0f,
         var iconHeight: Float = 0f,
         var iconMarginStart: Float = 0f,

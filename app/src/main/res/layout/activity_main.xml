@@ -18,18 +18,20 @@
         app:fb_shape="rectangle"
         app:fb_iconWidth="24dp"
         app:fb_iconHeight="24dp"
-        app:fb_iconPosition="left"
-        app:fb_gravity="center|start"
+        app:fb_iconPosition="top"
+        app:fb_gravity="center"
         app:fb_divColor="#fff"
-        app:fb_divWidth="1dp"
-        app:fb_iconMarginStart="16dp"
-        app:fb_iconMarginEnd="16dp"
+        app:fb_divHeight="1dp"
+        app:fb_iconMarginStart="12dp"
+        app:fb_iconMarginEnd="12dp"
         app:fb_icon="@drawable/ic_thumb_up"
         app:fb_iconColor="@color/colorPrimaryDark"
         app:fb_borderColor="@color/colorPrimary"
         app:fb_textPaddingStart="16dp"
         app:fb_textPaddingEnd="16dp"
+        app:fb_iconBackGroundColor="#888"
         app:fb_textColor="#FFF"
-        app:fb_text="Test "/>
+        app:fb_textGravity="center"
+        app:fb_text="Test button"/>
 
 </LinearLayout>

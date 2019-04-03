@@ -23,6 +23,8 @@
         app:fb_gravity="center"
         app:fb_divColor="#fff"
         app:fb_divHeight="2dp"
+        app:fb_showRipple="true"
+        app:fb_rippleColor="#FBC02D"
         app:fb_iconMarginStart="12dp"
         app:fb_iconMarginEnd="12dp"
         app:fb_icon="@drawable/ic_thumb_up"

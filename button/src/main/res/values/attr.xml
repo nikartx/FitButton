@@ -67,9 +67,10 @@
         </attr>
 
         <!-- Button -->
-        <attr name="fb_backgroundColor" format="color" />
+        <attr name="fb_backgroundColor" format="color|reference" />
         <attr name="fb_cornerRadius" format="dimension" />
         <attr name="fb_showRipple" format="boolean" />
+        <attr name="fb_rippleColor" format="color|reference" />
         <attr name="fb_shape">
             <enum name="rectangle" value="0" />
             <enum name="square" value="1" />

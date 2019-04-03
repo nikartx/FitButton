@@ -1,5 +1,6 @@
 package com.github.nikartm.button.model
 
+import android.graphics.Color
 import android.graphics.Typeface
 import android.graphics.drawable.Drawable
 import android.view.Gravity
@@ -45,7 +46,8 @@ data class FButton(
 
         var btnColor: Int = 0,
         var cornerRadius: Float = 0f,
-        var showRipple: Boolean = false,
+        var showRipple: Boolean = true,
+        var rippleColor: Int = Color.parseColor("#42FFFFFF"),
         var btnShape: Shape = Shape.RECTANGLE,
         var gravity: Int = Gravity.CENTER,
         var borderColor: Int = 0,

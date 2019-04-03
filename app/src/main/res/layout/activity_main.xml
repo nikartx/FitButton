@@ -10,6 +10,7 @@
     tools:context=".MainActivity">
 
     <com.github.nikartm.button.FitButton
+        android:id="@+id/fbtn"
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:layout_margin="32dp"
@@ -17,8 +18,8 @@
         app:fb_cornerRadius="20dp"
         app:fb_borderWidth="3dp"
         app:fb_shape="rectangle"
-        app:fb_iconWidth="24dp"
-        app:fb_iconHeight="24dp"
+        app:fb_iconWidth="30dp"
+        app:fb_iconHeight="30dp"
         app:fb_iconPosition="top"
         app:fb_gravity="center"
         app:fb_divColor="#fff"

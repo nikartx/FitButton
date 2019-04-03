@@ -32,12 +32,12 @@ internal class DividerDrawer(val view: FitButton, val button: FButton)
         div.visibility = button.divVisibility
         divParams = ViewGroup.MarginLayoutParams(WRAP_CONTENT, WRAP_CONTENT)
         if (button.divHeight == 0f && view.orientation == LinearLayout.HORIZONTAL) {
-            divParams.height = (view.measuredHeight - (button.borderWidth * 2f).toInt())
+            divParams.height = (view.layoutParams.height - (button.borderWidth * 2f).toInt())
         } else {
             divParams.height = button.divHeight.toInt()
         }
         if (button.divWidth == 0f && view.orientation == LinearLayout.VERTICAL) {
-            divParams.width = (view.measuredWidth - (button.borderWidth * 2f).toInt())
+            divParams.width = (view.layoutParams.width - (button.borderWidth * 2f).toInt())
         } else {
             divParams.width = button.divWidth.toInt()
         }

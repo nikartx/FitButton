@@ -20,7 +20,8 @@ class RippleEffect {
     companion object {
         fun createRipple(view: View, enableRipple: Boolean = true,
                          normalColor: Int, rippleColor: Int,
-                         container: GradientDrawable, corner: Float) {
+                         corner: Float,
+                         container: GradientDrawable) {
 
             if (enableRipple) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

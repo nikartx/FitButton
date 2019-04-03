@@ -8,6 +8,7 @@ import com.github.nikartm.button.model.FButton
 import com.github.nikartm.button.model.IconPosition
 import com.github.nikartm.button.model.Shape
 import com.github.nikartm.button.pxToDp
+import com.github.nikartm.button.util.RippleEffect
 
 /**
  * @author Ivan V on 27.03.2019.
@@ -33,8 +34,19 @@ internal class ContainerDrawer(val view: FitButton, val button: FButton)
         container.cornerRadius = pxToDp(button.cornerRadius)
         container.setColor(button.btnColor)
         container.setStroke(button.borderWidth.toInt(), button.borderColor)
-        view.background = container
         view.gravity = button.gravity
+        addRipple()
+    }
+
+    private fun addRipple() {
+        view.isClickable = true
+        view.isFocusable = true
+        RippleEffect.createRipple(view,
+                button.showRipple,
+                button.btnColor,
+                button.rippleColor,
+                button.cornerRadius,
+                container)
     }
 
     private fun setOrientation() {

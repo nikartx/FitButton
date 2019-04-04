@@ -7,6 +7,7 @@ import android.util.AttributeSet
 import android.view.Gravity
 import android.widget.LinearLayout
 import com.github.nikartm.button.model.IconPosition
+import com.github.nikartm.button.model.Shape
 
 /**
  * The button which can use with icon, text, divider and custom ripple effect.
@@ -487,7 +488,7 @@ class FitButton : LinearLayout {
      * Set the button text all caps
      * @param textAllCaps [Boolean]
      */
-    fun setTextColor(textAllCaps: Boolean) : FitButton {
+    fun setTextAllCaps(textAllCaps: Boolean) : FitButton {
         manager.getButton().textAllCaps = textAllCaps
         updateView()
         return this
@@ -528,6 +529,141 @@ class FitButton : LinearLayout {
      */
     fun setTextGravity(textGravity: Int) : FitButton {
         manager.getButton().textGravity = textGravity
+        updateView()
+        return this
+    }
+
+    /**
+     * Get the button background color
+     * @return button background color [Int]
+     */
+    fun getButtonColor() : Int = manager.getButton().btnColor
+
+    /**
+     * Set the button background color
+     * @param btnColor [Int]
+     */
+    fun setButtonColor(btnColor: Int) : FitButton {
+        manager.getButton().btnColor = btnColor
+        updateView()
+        return this
+    }
+
+    /**
+     * Get the button corner radius
+     * @return button corner radius [Float]
+     */
+    fun getCornerRadius() : Float = manager.getButton().cornerRadius
+
+    /**
+     * Set the button corner radius
+     * @param cornerRadius [Float]
+     */
+    fun setCornerRadius(cornerRadius: Float) : FitButton {
+        manager.getButton().cornerRadius = cornerRadius
+        updateView()
+        return this
+    }
+
+    /**
+     * Check the button ripple effect state - enable/disable
+     * @return ripple effect state [Boolean]
+     */
+    fun isRippleEnable() : Boolean = manager.getButton().enableRipple
+
+    /**
+     * Set the button ripple effect state enable/disable
+     * @param enableRipple [Boolean]
+     */
+    fun setRippleEnable(enableRipple: Boolean) : FitButton {
+        manager.getButton().enableRipple = enableRipple
+        updateView()
+        return this
+    }
+
+    /**
+     * Get the button ripple effect color
+     * @return ripple effect color [Int]
+     */
+    fun getRippleColor() : Int = manager.getButton().rippleColor
+
+    /**
+     * Set the button ripple effect color
+     * @param rippleColor [Int]
+     */
+    fun setRippleColor(rippleColor: Int) : FitButton {
+        manager.getButton().rippleColor = rippleColor
+        updateView()
+        return this
+    }
+
+    /**
+     * Get the button shape. By default uses [Shape.RECTANGLE]
+     * @return button shape [Shape]
+     */
+    fun getButtonShape() : Shape = manager.getButton().btnShape
+
+    /**
+     * Set the button shape
+     * @param btnShape [Shape]
+     */
+    fun setButtonShape(btnShape: Shape) : FitButton {
+        manager.getButton().btnShape = btnShape
+        updateView()
+        return this
+    }
+
+    /**
+     * Get the button gravity
+     * Currently available for use values:
+     * [Gravity] top, bottom, center, start, end
+     * By default using [Gravity.CENTER]
+     * Affects all elements inside the button
+     * @return button gravity [Int]
+     */
+    fun getButtonGravity() : Int = manager.getButton().gravity
+
+    /**
+     * Set the button gravity
+     * Currently available for use values:
+     * [Gravity] top, bottom, center, start, end
+     * Affects all elements inside the button
+     * @param gravity [Int]
+     */
+    fun setButtonGravity(gravity: Int) : FitButton {
+        manager.getButton().gravity = gravity
+        updateView()
+        return this
+    }
+
+    /**
+     * Get the button border color
+     * @return border color [Int]
+     */
+    fun getBorderColor() : Int = manager.getButton().borderColor
+
+    /**
+     * Set the button border color
+     * @param borderColor [Int]
+     */
+    fun setBorderColor(borderColor: Int) : FitButton {
+        manager.getButton().borderColor = borderColor
+        updateView()
+        return this
+    }
+
+    /**
+     * Get the button border width
+     * @return border width [Float]
+     */
+    fun getBorderWidth() : Float = manager.getButton().borderWidth
+
+    /**
+     * Set the button border width
+     * @param borderWidth [Float]
+     */
+    fun setBorderWidth(borderWidth: Float) : FitButton {
+        manager.getButton().borderWidth = borderWidth
         updateView()
         return this
     }

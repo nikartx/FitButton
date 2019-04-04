@@ -35,7 +35,7 @@ data class FButton(
         var textPaddingTop: Float = 0f,
         var textPaddingEnd: Float = 0f,
         var textPaddingBottom: Float = 0f,
-        var textFont: Typeface? = Typeface.DEFAULT,
+        var textFont: Typeface = Typeface.DEFAULT,
         var textStyle: Int = Typeface.NORMAL,
         var textSize: Float = 16f,
         var textColor: Int = 0,

@@ -45,7 +45,7 @@ data class FButton(
 
         var btnColor: Int = 0,
         var cornerRadius: Float = 0f,
-        var showRipple: Boolean = true,
+        var enableRipple: Boolean = true,
         var rippleColor: Int = 0,
         var btnShape: Shape = Shape.RECTANGLE,
         var gravity: Int = Gravity.CENTER,

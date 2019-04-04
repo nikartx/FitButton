@@ -42,7 +42,7 @@ internal class ContainerDrawer(val view: FitButton, val button: FButton)
         view.isClickable = true
         view.isFocusable = true
         RippleEffect.createRipple(view,
-                button.showRipple,
+                button.enableRipple,
                 button.btnColor,
                 button.rippleColor,
                 button.cornerRadius,

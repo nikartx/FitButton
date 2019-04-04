@@ -20,10 +20,10 @@
         app:fb_shape="rectangle"
         app:fb_iconWidth="30dp"
         app:fb_iconHeight="30dp"
-        app:fb_iconPosition="top"
+        app:fb_iconPosition="left"
         app:fb_gravity="center"
         app:fb_divColor="#fff"
-        app:fb_divHeight="2dp"
+        app:fb_divWidth="2dp"
         app:fb_showRipple="true"
         app:fb_rippleColor="#FBC02D"
         app:fb_iconMarginStart="12dp"
@@ -34,7 +34,7 @@
         app:fb_textPaddingStart="16dp"
         app:fb_textPaddingEnd="16dp"
         app:fb_textColor="#FFF"
-        app:fb_textGravity="center"
-        app:fb_text="Test" />
+        app:fb_textGravity="start|center"
+        app:fb_text="Test Button" />
 
 </LinearLayout>

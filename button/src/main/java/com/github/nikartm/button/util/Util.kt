@@ -4,6 +4,7 @@ import android.content.res.Resources
 import android.util.TypedValue
 
 /**
+ * The [FitButton] utils
  * @author Ivan V on 27.03.2019.
  * @version 1.0
  */

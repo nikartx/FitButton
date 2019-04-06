@@ -6,6 +6,7 @@ import android.view.Gravity
 import android.view.View
 
 /**
+ * The [FitButton] entity
  * @author Ivan V on 25.03.2019.
  * @version 1.0
  */

@@ -11,13 +11,14 @@ import com.github.nikartm.button.util.pxToDp
 import com.github.nikartm.button.util.RippleEffect
 
 /**
+ * Drawing the FitButton view container
  * @author Ivan V on 27.03.2019.
  * @version 1.0
  */
 internal class ContainerDrawer(val view: FitButton, val button: FButton)
     : Drawer<FitButton, FButton>(view, button) {
 
-    lateinit var container: GradientDrawable
+    private lateinit var container: GradientDrawable
 
     override fun draw() {
         initContainer()
@@ -38,6 +39,7 @@ internal class ContainerDrawer(val view: FitButton, val button: FButton)
         addRipple()
     }
 
+    // Add ripple effect for the button
     private fun addRipple() {
         view.isClickable = true
         view.isFocusable = true
@@ -49,6 +51,7 @@ internal class ContainerDrawer(val view: FitButton, val button: FButton)
                 container)
     }
 
+    // Set the layout orientation dependent on icon position
     private fun setOrientation() {
         view.orientation = when (button.iconPosition) {
             IconPosition.LEFT, IconPosition.RIGHT -> LinearLayout.HORIZONTAL
@@ -56,6 +59,7 @@ internal class ContainerDrawer(val view: FitButton, val button: FButton)
         }
     }
 
+    // Draw button shape
     private fun drawShape() {
         container.shape = when (button.btnShape) {
             Shape.RECTANGLE -> GradientDrawable.RECTANGLE

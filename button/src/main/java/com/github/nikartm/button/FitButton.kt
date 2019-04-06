@@ -11,7 +11,6 @@ import com.github.nikartm.button.model.Shape
 
 /**
  * The button which can use with icon, text, divider and custom ripple effect.
- *
  * @author Ivan V on 25.03.2019.
  * @version 1.0
  */
@@ -34,6 +33,7 @@ class FitButton : LinearLayout {
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
         manager.drawButton()
+        isEnabled = true
     }
 
     /**

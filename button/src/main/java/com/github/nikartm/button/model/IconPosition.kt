@@ -1,6 +1,7 @@
 package com.github.nikartm.button.model
 
 /**
+ * An Icon position on a View
  * @author Ivan V on 27.03.2019.
  * @version 1.0
  */

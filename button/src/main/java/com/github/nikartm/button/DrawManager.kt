@@ -10,6 +10,7 @@ import com.github.nikartm.button.model.FButton
 import com.github.nikartm.button.model.IconPosition
 
 /**
+ * The [FitButton] drawer manager
  * @author Ivan V on 25.03.2019.
  * @version 1.0
  */

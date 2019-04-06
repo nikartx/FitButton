@@ -11,6 +11,7 @@ import com.github.nikartm.button.model.Shape
 import com.github.nikartm.button.util.txtPxToSp
 
 /**
+ * The [FitButton] attrs controller
  * @author Ivan V on 25.03.2019.
  * @version 1.0
  */

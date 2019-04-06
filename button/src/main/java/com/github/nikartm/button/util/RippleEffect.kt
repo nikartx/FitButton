@@ -10,7 +10,6 @@ import android.view.View
 
 /**
  * Ripple effect for the [FitButton]
- *
  * @author Ivan V on 03.04.2019.
  * @version 1.0
  */

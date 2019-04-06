@@ -668,6 +668,23 @@ class FitButton : LinearLayout {
         return this
     }
 
+    /**
+     * Get the button enable state.
+     * If state is true button enabled, false - disable
+     * @return enable state [Boolean]
+     */
+    fun isEnableButton() : Boolean = manager.getButton().enable
+
+    /**
+     * Set the button enable state.
+     * @param enable [Boolean]
+     */
+    fun setEnableButton(enable: Boolean) : FitButton {
+        manager.getButton().enable = enable
+        updateView()
+        return this
+    }
+
     private fun updateView() {
         invalidate()
     }

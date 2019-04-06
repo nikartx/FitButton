@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'com.novoda.bintray-release'
 
 android {
     compileSdkVersion 28
@@ -25,12 +26,32 @@ repositories {
     mavenCentral()
 }
 
+allprojects {
+    tasks.withType(Javadoc).all { enabled = false }
+}
+
+if (JavaVersion.current().isJava8Compatible()) {
+    allprojects {
+        tasks.withType(Javadoc) {
+            options.addStringOption('Xdoclint:none', '-quiet')
+        }
+    }
+}
+
+publish {
+    userOrg = 'nikart'
+    groupId = 'com.github.nikartm'
+    artifactId = 'fit-button'
+    publishVersion = '1.0.0'
+    desc = 'The button which can use with icon, text, divider and custom ripple effect'
+    licences = ['Apache-2.0']
+    uploadName='FitButton'
+    website = 'https://github.com/nikartm/FitButton'
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation 'com.android.support:appcompat-v7:28.0.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:28.0.0'
 }

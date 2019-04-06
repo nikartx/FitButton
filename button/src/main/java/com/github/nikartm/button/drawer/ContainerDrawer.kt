@@ -39,12 +39,13 @@ internal class ContainerDrawer(val view: FitButton, val button: FButton)
         addRipple()
     }
 
-    // Add ripple effect for the button
+    // Add a ripple effect for the button if it was enabled
     private fun addRipple() {
-        view.isClickable = true
-        view.isFocusable = true
+        view.isEnabled = button.enable
+        view.isClickable = button.enable
+        view.isFocusable = button.enable
         RippleEffect.createRipple(view,
-                button.enableRipple,
+                button.enableRipple && button.enable,
                 button.btnColor,
                 button.rippleColor,
                 button.cornerRadius,

@@ -3,6 +3,8 @@ package com.github.nikartm.button
 import android.content.Context
 import android.graphics.Typeface
 import android.graphics.drawable.Drawable
+import android.support.annotation.FontRes
+import android.support.v4.content.res.ResourcesCompat
 import android.util.AttributeSet
 import android.view.Gravity
 import android.widget.LinearLayout
@@ -33,7 +35,6 @@ class FitButton : LinearLayout {
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
         manager.drawButton()
-        isEnabled = true
     }
 
     /**
@@ -418,14 +419,28 @@ class FitButton : LinearLayout {
      * Get the button text font
      * @return text font [Typeface]
      */
-    fun getTextTypeface() : Typeface = manager.getButton().textFont
+    fun getTextTypeface() : Typeface? = manager.getButton().textFont
 
     /**
      * Set the button text font
+     * If a Typeface [FitButton] was installed then it font will be used,
+     * otherwise uses [FitButton] fontRes
      * @param textFont [Typeface]
      */
-    fun setTextTypeface(textFont: Typeface) : FitButton {
+    fun setTextTypeface(textFont: Typeface?) : FitButton {
         manager.getButton().textFont = textFont
+        updateView()
+        return this
+    }
+
+    /**
+     * Set the button text font from font resources, e.g. res/font/example.ttf
+     * Method [setTextTypeface] have priority
+     * @param resId [FontRes]
+     */
+    fun setTextFont(@FontRes resId: Int) : FitButton {
+        manager.getButton().fontRes = resId
+        manager.getButton().textFont = ResourcesCompat.getFont(context, resId)
         updateView()
         return this
     }
@@ -686,7 +701,7 @@ class FitButton : LinearLayout {
     }
 
     private fun updateView() {
-        invalidate()
+        postInvalidate()
     }
 
 }

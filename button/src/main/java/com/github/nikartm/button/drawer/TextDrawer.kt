@@ -1,15 +1,17 @@
 package com.github.nikartm.button.drawer
 
 import android.graphics.Typeface
+import android.support.v4.content.res.ResourcesCompat
 import android.text.TextUtils
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.github.nikartm.button.FitButton
-import com.github.nikartm.button.util.getDensity
 import com.github.nikartm.button.model.FButton
+import com.github.nikartm.button.util.getDensity
 
 /**
  * @author Ivan V on 27.03.2019.
@@ -32,7 +34,6 @@ internal class TextDrawer(val view: FitButton, val button: FButton)
     private fun initText() {
         tv = TextView(view.context)
         tv.text = button.text
-        tv.typeface = Typeface.create(button.textFont, button.textStyle)
         tv.textSize = button.textSize / getDensity()
         tv.setTextColor(button.textColor)
         tv.isAllCaps = button.textAllCaps
@@ -45,6 +46,22 @@ internal class TextDrawer(val view: FitButton, val button: FButton)
         } else {
             tv.layoutParams = LinearLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT, 1f)
 
+        }
+        setTypeface()
+    }
+
+    private fun setTypeface() {
+        if (button.textFont != null) {
+            tv.typeface = button.textFont
+        } else{
+            if (button.fontRes != 0) {
+                try {
+                    view.setTextFont(button.fontRes)
+                    tv.setTypeface(button.textFont, Typeface.NORMAL)
+                } catch (e: Exception) {
+                    Log.e(TextDrawer::class.java.simpleName, "Incorrect font resource")
+                }
+            }
         }
     }
 

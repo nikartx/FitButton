@@ -1,41 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.v4.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center|top"
-    tools:context=".MainActivity">
+    android:clickable="false"
+    android:fillViewport="true">
 
-    <com.github.nikartm.button.FitButton
-        android:id="@+id/fbtn"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:layout_margin="32dp"
-        app:fb_backgroundColor="@color/colorAccent"
-        app:fb_cornerRadius="20dp"
-        app:fb_borderWidth="3dp"
-        app:fb_shape="rectangle"
-        app:fb_iconWidth="30dp"
-        app:fb_iconHeight="30dp"
-        app:fb_iconPosition="left"
-        app:fb_gravity="center"
-        app:fb_divColor="#fff"
-        app:fb_divWidth="2dp"
-        app:fb_enable="true"
-        app:fb_enableRipple="true"
-        app:fb_rippleColor="#FBC02D"
-        app:fb_iconMarginStart="12dp"
-        app:fb_iconMarginEnd="12dp"
-        app:fb_icon="@drawable/ic_thumb_up"
-        app:fb_iconColor="@color/colorPrimaryDark"
-        app:fb_borderColor="@color/colorPrimary"
-        app:fb_textPaddingStart="16dp"
-        app:fb_textPaddingEnd="16dp"
-        app:fb_textColor="#FFF"
-        app:fb_textGravity="start|center"
-        app:fb_text="Test Button" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center|top"
+        tools:context=".MainActivity">
 
-</LinearLayout>
+        <com.github.nikartm.button.FitButton
+            android:id="@+id/fbtn"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_margin="32dp"
+            app:fb_cornerRadius="28dp"
+            app:fb_shape="rectangle"
+            app:fb_divColor="#fff"
+            app:fb_divWidth="1dp"
+            app:fb_divHeight="40dp"
+            app:fb_rippleColor="#FBE9E7"
+            app:fb_iconWidth="28dp"
+            app:fb_iconHeight="28dp"
+            app:fb_iconPosition="left"
+            app:fb_iconMarginStart="30dp"
+            app:fb_iconMarginEnd="12dp"
+            app:fb_icon="@drawable/ic_thumb_up"
+            app:fb_iconColor="#FBE9E7"
+            app:fb_textPaddingStart="16dp"
+            app:fb_textColor="#FFF"
+            app:fb_textGravity="start|center"
+            app:fb_text="Like Me"
+            app:fb_backgroundColor="#FF7043"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <include layout="@layout/layout_square_buttons" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <include layout="@layout/layout_circle_buttons" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <include layout="@layout/layout_other_buttons" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <include layout="@layout/layout_rect_buttons" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

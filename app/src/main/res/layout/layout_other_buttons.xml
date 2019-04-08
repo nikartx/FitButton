@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#0277BD">
+
+    <com.github.nikartm.button.FitButton
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        app:fb_shape="rectangle"
+        app:fb_text="Facebook"
+        app:fb_textPaddingStart="12dp"
+        app:fb_iconPosition="left"
+        app:fb_textGravity="start|center"
+        app:fb_textColor="#FFF"
+        app:fb_icon="@drawable/facebook"
+        app:fb_iconMarginStart="12dp"
+        app:fb_iconWidth="24dp"
+        app:fb_iconHeight="24dp"
+        app:fb_borderWidth="2dp"
+        app:fb_borderColor="#fff"/>
+
+    <com.github.nikartm.button.FitButton
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        app:fb_cornerRadius="7dp"
+        app:fb_shape="rectangle"
+        app:fb_text="Log in with GitHub"
+        app:fb_textPaddingStart="12dp"
+        app:fb_iconPosition="left"
+        app:fb_textGravity="start|center"
+        app:fb_textColor="#FFF"
+        app:fb_icon="@drawable/github"
+        app:fb_iconMarginStart="12dp"
+        app:fb_iconWidth="24dp"
+        app:fb_iconHeight="24dp"
+        app:fb_borderWidth="2dp"
+        app:fb_borderColor="#fff"/>
+
+    <com.github.nikartm.button.FitButton
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        app:fb_cornerRadius="20dp"
+        app:fb_shape="rectangle"
+        app:fb_rippleColor="#7986CB"
+        app:fb_text="Open Dropbox"
+        app:fb_textPaddingStart="12dp"
+        app:fb_iconPosition="left"
+        app:fb_textGravity="start|center"
+        app:fb_textColor="#FFF"
+        app:fb_icon="@drawable/dropbox"
+        app:fb_iconMarginStart="12dp"
+        app:fb_iconWidth="24dp"
+        app:fb_iconHeight="24dp"
+        app:fb_borderWidth="2dp"
+        app:fb_borderColor="#fff"/>
+
+</LinearLayout>

@@ -73,8 +73,10 @@ internal class ContainerDrawer(val view: FitButton, val button: FButton)
     // Align a shape sides by a min side
     private fun alignSides(shape: Int) : Int {
         val min = Math.min(view.measuredWidth, view.measuredHeight)
-        view.layoutParams.width = min
-        view.layoutParams.height = min
+        if (view.layoutParams != null) {
+            view.layoutParams.width = min
+            view.layoutParams.height = min
+        }
         return shape
     }
 

@@ -31,6 +31,11 @@ internal class TextDrawer(val view: FitButton, val button: FButton)
 
     private fun initText() {
         tv = TextView(view.context)
+        if (view.orientation == LinearLayout.HORIZONTAL) {
+            tv.layoutParams = LinearLayout.LayoutParams(WRAP_CONTENT, MATCH_PARENT, 1f)
+        } else {
+            tv.layoutParams = LinearLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT, 1f)
+        }
         tv.text = button.text
         tv.textSize = button.textSize / getDensity()
         tv.setTextColor(button.textColor)
@@ -39,12 +44,6 @@ internal class TextDrawer(val view: FitButton, val button: FButton)
         tv.gravity = button.textGravity
         tv.setPadding(button.textPaddingStart.toInt(), button.textPaddingTop.toInt(),
                 button.textPaddingEnd.toInt(), button.textPaddingBottom.toInt())
-        if (view.orientation == LinearLayout.HORIZONTAL) {
-            tv.layoutParams = LinearLayout.LayoutParams(WRAP_CONTENT, MATCH_PARENT, 1f)
-        } else {
-            tv.layoutParams = LinearLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT, 1f)
-
-        }
         setTypeface()
     }
 

@@ -7,6 +7,7 @@ import android.support.annotation.FontRes
 import android.support.v4.content.res.ResourcesCompat
 import android.util.AttributeSet
 import android.view.Gravity
+import android.view.View
 import android.widget.LinearLayout
 import com.github.nikartm.button.model.IconPosition
 import com.github.nikartm.button.model.Shape
@@ -29,12 +30,7 @@ class FitButton : LinearLayout {
     }
 
     private fun bind(attrs: AttributeSet?) {
-        manager = DrawManager(this, attrs)
-    }
-
-    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
-        manager.drawButton()
+        manager = DrawManager(this, attrs).drawButton()
     }
 
     /**

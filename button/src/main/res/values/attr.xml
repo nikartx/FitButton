@@ -44,7 +44,7 @@
         <attr name="fb_textPaddingTop" format="dimension" />
         <attr name="fb_textPaddingEnd" format="dimension" />
         <attr name="fb_textPaddingBottom" format="dimension" />
-        <attr name="fb_fontFamily" format="string|reference" />
+        <attr name="fb_fontFamilyRes" format="reference" />
         <attr name="fb_textStyle">
             <flag name="normal" value="0" />
             <flag name="bold" value="1" />

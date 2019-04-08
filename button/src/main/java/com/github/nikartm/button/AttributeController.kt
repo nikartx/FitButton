@@ -2,6 +2,7 @@ package com.github.nikartm.button
 
 import android.graphics.Color
 import android.graphics.Typeface
+import android.text.TextUtils
 import android.util.AttributeSet
 import android.view.Gravity
 import android.view.View
@@ -60,8 +61,7 @@ internal class AttributeController(private val view: View, private val attrs: At
         val textPaddingTop = typedArray.getDimension(R.styleable.FitButton_fb_textPaddingTop, 0f)
         val textPaddingEnd = typedArray.getDimension(R.styleable.FitButton_fb_textPaddingEnd, 0f)
         val textPaddingBottom = typedArray.getDimension(R.styleable.FitButton_fb_textPaddingBottom, 0f)
-        val fontPath = typedArray.getString(R.styleable.FitButton_fb_fontFamily)
-        val textFont = if (fontPath != null) Typeface.createFromFile(fontPath) else Typeface.DEFAULT
+        val fontRes = typedArray.getResourceId(R.styleable.FitButton_fb_fontFamilyRes, 0)
         val textStyle = typedArray.getInt(R.styleable.FitButton_fb_textStyle, Typeface.NORMAL)
         val textSize = typedArray.getDimension(R.styleable.FitButton_fb_textSize, txtPxToSp(16f))
         val textColor = typedArray.getColor(R.styleable.FitButton_fb_textColor, Color.DKGRAY)
@@ -103,7 +103,8 @@ internal class AttributeController(private val view: View, private val attrs: At
                 textPaddingTop,
                 textPaddingEnd,
                 textPaddingBottom,
-                textFont,
+                fontRes,
+                null,
                 textStyle,
                 textSize,
                 textColor,

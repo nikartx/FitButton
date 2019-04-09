@@ -42,7 +42,7 @@ publish {
     userOrg = 'nikart'
     groupId = 'com.github.nikartm'
     artifactId = 'fit-button'
-    publishVersion = '1.0.0'
+    publishVersion = '1.1.0'
     desc = 'The button which can use with icon, text, divider and custom ripple effect'
     licences = ['Apache-2.0']
     uploadName='FitButton'

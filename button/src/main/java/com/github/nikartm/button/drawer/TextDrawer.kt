@@ -1,7 +1,6 @@
 package com.github.nikartm.button.drawer
 
 import android.graphics.Typeface
-import android.support.v4.content.res.ResourcesCompat
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
@@ -9,6 +8,7 @@ import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.content.res.ResourcesCompat
 import com.github.nikartm.button.FitButton
 import com.github.nikartm.button.model.FButton
 import com.github.nikartm.button.util.getDensity

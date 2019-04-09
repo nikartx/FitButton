@@ -3,12 +3,12 @@ package com.github.nikartm.button
 import android.content.Context
 import android.graphics.Typeface
 import android.graphics.drawable.Drawable
-import android.support.annotation.FontRes
-import android.support.v4.content.res.ResourcesCompat
 import android.util.AttributeSet
 import android.view.Gravity
 import android.view.View
 import android.widget.LinearLayout
+import androidx.annotation.FontRes
+import androidx.core.content.res.ResourcesCompat
 import com.github.nikartm.button.model.IconPosition
 import com.github.nikartm.button.model.Shape
 import com.github.nikartm.button.util.dpToPx

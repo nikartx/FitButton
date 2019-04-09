@@ -104,7 +104,7 @@
             app:fb_shape="circle"
             app:fb_borderWidth="2dp"
             app:fb_borderColor="#5E35B1"
-            app:fb_text="Run"
+            app:fb_text="Exit"
             app:fb_iconColor="#5E35B1"
             app:fb_divColor="#FFF"
             app:fb_textColor="#FFF"

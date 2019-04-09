@@ -15,13 +15,14 @@
         android:gravity="center|top"
         tools:context=".MainActivity">
 
+        <!-- Changed in the MainActivity -->
         <com.github.nikartm.button.FitButton
             android:id="@+id/fbtn"
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:layout_margin="32dp"
             android:enabled="true"
-            app:fb_cornerRadius="28dp"
+            app:fb_cornerRadius="2dp"
             app:fb_shape="rectangle"
             app:fb_divColor="#fff"
             app:fb_divWidth="1dp"
@@ -31,7 +32,7 @@
             app:fb_iconHeight="28dp"
             app:fb_iconPosition="left"
             app:fb_iconMarginStart="30dp"
-            app:fb_iconMarginEnd="12dp"
+            app:fb_iconMarginEnd="16dp"
             app:fb_icon="@drawable/ic_thumb_up"
             app:fb_iconColor="#FBE9E7"
             app:fb_textPaddingStart="16dp"

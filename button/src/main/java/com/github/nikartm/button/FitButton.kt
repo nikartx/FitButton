@@ -11,6 +11,8 @@ import android.view.View
 import android.widget.LinearLayout
 import com.github.nikartm.button.model.IconPosition
 import com.github.nikartm.button.model.Shape
+import com.github.nikartm.button.util.dpToPx
+import com.github.nikartm.button.util.txtPxToSp
 
 /**
  * The button which can use with icon, text, divider and custom ripple effect.
@@ -76,7 +78,7 @@ class FitButton : LinearLayout {
      * @param iconWidth [Float]
      */
     fun setIconWidth(iconWidth: Float) : FitButton {
-        manager.getButton().iconWidth = iconWidth
+        manager.getButton().iconWidth = dpToPx(iconWidth)
         updateView()
         return this
     }
@@ -92,7 +94,7 @@ class FitButton : LinearLayout {
      * @param iconHeight [Float]
      */
     fun setIconHeight(iconHeight: Float) : FitButton {
-        manager.getButton().iconHeight = iconHeight
+        manager.getButton().iconHeight = dpToPx(iconHeight)
         updateView()
         return this
     }
@@ -108,7 +110,7 @@ class FitButton : LinearLayout {
      * @param iconMarginStart [Float]
      */
     fun setIconMarginStart(iconMarginStart: Float) : FitButton {
-        manager.getButton().iconMarginStart = iconMarginStart
+        manager.getButton().iconMarginStart = dpToPx(iconMarginStart)
         updateView()
         return this
     }
@@ -124,7 +126,7 @@ class FitButton : LinearLayout {
      * @param iconMarginTop [Float]
      */
     fun setIconMarginTop(iconMarginTop: Float) : FitButton {
-        manager.getButton().iconMarginTop = iconMarginTop
+        manager.getButton().iconMarginTop = dpToPx(iconMarginTop)
         updateView()
         return this
     }
@@ -140,7 +142,7 @@ class FitButton : LinearLayout {
      * @param iconMarginEnd [Float]
      */
     fun setIconMarginEnd(iconMarginEnd: Float) : FitButton {
-        manager.getButton().iconMarginEnd = iconMarginEnd
+        manager.getButton().iconMarginEnd = dpToPx(iconMarginEnd)
         updateView()
         return this
     }
@@ -156,7 +158,7 @@ class FitButton : LinearLayout {
      * @param iconMarginBottom [Float]
      */
     fun setIconMarginBottom(iconMarginBottom: Float) : FitButton {
-        manager.getButton().iconMarginBottom = iconMarginBottom
+        manager.getButton().iconMarginBottom = dpToPx(iconMarginBottom)
         updateView()
         return this
     }
@@ -225,7 +227,7 @@ class FitButton : LinearLayout {
      * @param divWidth [Float]
      */
     fun setDividerWidth(divWidth: Float) : FitButton {
-        manager.getButton().divWidth = divWidth
+        manager.getButton().divWidth = dpToPx(divWidth)
         updateView()
         return this
     }
@@ -241,7 +243,7 @@ class FitButton : LinearLayout {
      * @param divHeight [Float]
      */
     fun setDividerHeight(divHeight: Float) : FitButton {
-        manager.getButton().divHeight = divHeight
+        manager.getButton().divHeight = dpToPx(divHeight)
         updateView()
         return this
     }
@@ -257,7 +259,7 @@ class FitButton : LinearLayout {
      * @param divMarginTop [Float]
      */
     fun setDividerMarginTop(divMarginTop: Float) : FitButton {
-        manager.getButton().divMarginTop = divMarginTop
+        manager.getButton().divMarginTop = dpToPx(divMarginTop)
         updateView()
         return this
     }
@@ -273,7 +275,7 @@ class FitButton : LinearLayout {
      * @param divMarginBottom [Float]
      */
     fun setDividerMarginBottom(divMarginBottom: Float) : FitButton {
-        manager.getButton().divMarginBottom = divMarginBottom
+        manager.getButton().divMarginBottom = dpToPx(divMarginBottom)
         updateView()
         return this
     }
@@ -289,7 +291,7 @@ class FitButton : LinearLayout {
      * @param divMarginStart [Float]
      */
     fun setDividerMarginStart(divMarginStart: Float) : FitButton {
-        manager.getButton().divMarginStart = divMarginStart
+        manager.getButton().divMarginStart = dpToPx(divMarginStart)
         updateView()
         return this
     }
@@ -305,7 +307,7 @@ class FitButton : LinearLayout {
      * @param divMarginEnd [Float]
      */
     fun setDividerMarginEnd(divMarginEnd: Float) : FitButton {
-        manager.getButton().divMarginEnd = divMarginEnd
+        manager.getButton().divMarginEnd = dpToPx(divMarginEnd)
         updateView()
         return this
     }
@@ -358,7 +360,7 @@ class FitButton : LinearLayout {
      * @param textPaddingStart [Float]
      */
     fun setTextPaddingStart(textPaddingStart: Float) : FitButton {
-        manager.getButton().textPaddingStart = textPaddingStart
+        manager.getButton().textPaddingStart = dpToPx(textPaddingStart)
         updateView()
         return this
     }
@@ -374,7 +376,7 @@ class FitButton : LinearLayout {
      * @param textPaddingTop [Float]
      */
     fun setTextPaddingTop(textPaddingTop: Float) : FitButton {
-        manager.getButton().textPaddingTop = textPaddingTop
+        manager.getButton().textPaddingTop = dpToPx(textPaddingTop)
         updateView()
         return this
     }
@@ -390,7 +392,7 @@ class FitButton : LinearLayout {
      * @param textPaddingEnd [Float]
      */
     fun setTextPaddingEnd(textPaddingEnd: Float) : FitButton {
-        manager.getButton().textPaddingEnd = textPaddingEnd
+        manager.getButton().textPaddingEnd = dpToPx(textPaddingEnd)
         updateView()
         return this
     }
@@ -406,7 +408,7 @@ class FitButton : LinearLayout {
      * @param textPaddingBottom [Float]
      */
     fun setTextPaddingBottom(textPaddingBottom: Float) : FitButton {
-        manager.getButton().textPaddingBottom = textPaddingBottom
+        manager.getButton().textPaddingBottom = dpToPx(textPaddingBottom)
         updateView()
         return this
     }
@@ -468,7 +470,7 @@ class FitButton : LinearLayout {
      * @param textSize [Float]
      */
     fun setTextSize(textSize: Float) : FitButton {
-        manager.getButton().textSize = textSize
+        manager.getButton().textSize = txtPxToSp(textSize)
         updateView()
         return this
     }
@@ -571,7 +573,7 @@ class FitButton : LinearLayout {
      * @param cornerRadius [Float]
      */
     fun setCornerRadius(cornerRadius: Float) : FitButton {
-        manager.getButton().cornerRadius = cornerRadius
+        manager.getButton().cornerRadius = dpToPx(cornerRadius)
         updateView()
         return this
     }
@@ -674,7 +676,7 @@ class FitButton : LinearLayout {
      * @param borderWidth [Float]
      */
     fun setBorderWidth(borderWidth: Float) : FitButton {
-        manager.getButton().borderWidth = borderWidth
+        manager.getButton().borderWidth = dpToPx(borderWidth)
         updateView()
         return this
     }

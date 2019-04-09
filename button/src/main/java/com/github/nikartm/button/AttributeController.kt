@@ -2,7 +2,6 @@ package com.github.nikartm.button
 
 import android.graphics.Color
 import android.graphics.Typeface
-import android.text.TextUtils
 import android.util.AttributeSet
 import android.view.Gravity
 import android.view.View
@@ -76,7 +75,7 @@ internal class AttributeController(private val view: View, private val attrs: At
         val rippleColor = typedArray.getColor(R.styleable.FitButton_fb_rippleColor, Color.parseColor("#42FFFFFF"))
         val shape = typedArray.getInt(R.styleable.FitButton_fb_shape, Shape.RECTANGLE.shape)
         val gravity = typedArray.getInt(R.styleable.FitButton_fb_gravity, Gravity.CENTER)
-        val enable = typedArray.getBoolean(R.styleable.FitButton_fb_enable, true)
+        val enable = typedArray.getBoolean(R.styleable.FitButton_android_enabled, true)
         val borderColor = typedArray.getColor(R.styleable.FitButton_fb_borderColor, Color.TRANSPARENT)
         val borderWidth = typedArray.getDimension(R.styleable.FitButton_fb_borderWidth, 0f)
 

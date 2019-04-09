@@ -525,7 +525,7 @@ class FitButton : LinearLayout {
 
     /**
      * Get the button text gravity
-     * Currently available for use values:
+     * Values currently available for use values:
      * [Gravity] top, bottom, center, start, end
      * By default using [Gravity.CENTER]
      * @return text gravity [Int]
@@ -534,7 +534,7 @@ class FitButton : LinearLayout {
 
     /**
      * Set the button text gravity
-     * Currently available for use values:
+     * Values currently available for use values:
      * [Gravity] top, bottom, center, start, end
      * @param textGravity [Int]
      */
@@ -626,7 +626,7 @@ class FitButton : LinearLayout {
 
     /**
      * Get the button gravity
-     * Currently available for use values:
+     * Values currently available for use:
      * [Gravity] top, bottom, center, start, end
      * By default using [Gravity.CENTER]
      * Affects all elements inside the button
@@ -636,7 +636,7 @@ class FitButton : LinearLayout {
 
     /**
      * Set the button gravity
-     * Currently available for use values:
+     * Values currently available for use values:
      * [Gravity] top, bottom, center, start, end
      * Affects all elements inside the button
      * @param gravity [Int]
@@ -680,23 +680,29 @@ class FitButton : LinearLayout {
     }
 
     /**
-     * Get the button enable state.
-     * If state is true button enabled, false - disable
-     * @return enable state [Boolean]
+     * Get the button enabled state.
+     * If state is true button is enabled, false - disabled
+     * @return enabled state [Boolean]
      */
-    fun isEnableButton() : Boolean = manager.getButton().enable
-
-    /**
-     * Set the button enable state.
-     * @param enable [Boolean]
-     */
-    fun setEnableButton(enable: Boolean) : FitButton {
-        manager.getButton().enable = enable
-        updateView()
-        return this
+    override fun isEnabled(): Boolean {
+        lazy {
+            return@lazy manager.getButton().enable
+        }
+        return super.isEnabled()
     }
 
-    // Update all elements on button
+    /**
+     * Set the button enabled state.
+     * @param enabled [Boolean]
+     */
+    override fun setEnabled(enabled: Boolean) {
+        if (::manager.isInitialized) {
+            manager.getButton().enable = enabled
+            super.setEnabled(enabled)
+        }
+    }
+
+    // Update all elements on the button
     private fun updateView() {
         removeAllViews()
         manager.drawButton()

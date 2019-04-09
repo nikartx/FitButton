@@ -11,7 +11,7 @@ import android.view.View
  * @version 1.0
  */
 data class FButton(
-        var icon: Drawable?,
+        var icon: Drawable? = null,
         var iconColor: Int = 0,
         var iconWidth: Float = 0f,
         var iconHeight: Float = 0f,
@@ -31,13 +31,13 @@ data class FButton(
         var divMarginEnd: Float = 0f,
         var divVisibility: Int = View.VISIBLE,
 
-        var text: String?,
+        var text: String? = null,
         var textPaddingStart: Float = 0f,
         var textPaddingTop: Float = 0f,
         var textPaddingEnd: Float = 0f,
         var textPaddingBottom: Float = 0f,
         var fontRes: Int = 0,
-        var textFont: Typeface?,
+        var textFont: Typeface? = Typeface.DEFAULT,
         var textStyle: Int = Typeface.NORMAL,
         var textSize: Float = 16f,
         var textColor: Int = 0,

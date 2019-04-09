@@ -20,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="58dp"
             android:layout_margin="32dp"
+            android:enabled="true"
             app:fb_cornerRadius="28dp"
             app:fb_shape="rectangle"
             app:fb_divColor="#fff"

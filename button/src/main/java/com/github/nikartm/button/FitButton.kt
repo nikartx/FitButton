@@ -696,8 +696,10 @@ class FitButton : LinearLayout {
         return this
     }
 
+    // Update all elements on button
     private fun updateView() {
-        postInvalidate()
+        removeAllViews()
+        manager.drawButton()
     }
 
 }

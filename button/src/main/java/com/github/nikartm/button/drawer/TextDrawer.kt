@@ -1,5 +1,7 @@
 package com.github.nikartm.button.drawer
 
+import android.graphics.Typeface
+import android.support.v4.content.res.ResourcesCompat
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
@@ -48,13 +50,15 @@ internal class TextDrawer(val view: FitButton, val button: FButton)
     }
 
     private fun setTypeface() {
+        tv.setTypeface(Typeface.DEFAULT, button.textStyle)
         if (button.textFont != null) {
-            tv.typeface = button.textFont
-        } else{
+            tv.setTypeface(button.textFont, button.textStyle)
+        } else {
             if (button.fontRes != 0) {
                 try {
-                    view.setTextFont(button.fontRes)
-                    tv.setTypeface(button.textFont, button.textStyle)
+                    val tf = ResourcesCompat.getFont(view.context, button.fontRes)
+                    tv.setTypeface(tf, button.textStyle)
+                    button.textFont = tf
                 } catch (e: Exception) {
                     Log.e(TextDrawer::class.java.simpleName, "Incorrect font resource")
                 }

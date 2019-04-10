@@ -1,6 +1,4 @@
-[ ![Download](https://api.bintray.com/packages/nikart/maven/FitButton/images/download.svg) ](https://bintray.com/nikart/maven/FitButton/_latestVersion) [![](https://jitpack.io/v/nikartm/FitButton.svg)](https://jitpack.io/#nikartm/FitButton)
-
-Support Android SDK 17+
+[ ![Download](https://api.bintray.com/packages/nikart/maven/FitButton/images/download.svg) ](https://bintray.com/nikart/maven/FitButton/_latestVersion) [![](https://jitpack.io/v/nikartm/FitButton.svg)](https://jitpack.io/#nikartm/FitButton) [![API](https://img.shields.io/badge/API-17%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=17)
 
 # FitButton
 The button which includes features:

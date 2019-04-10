@@ -1,5 +1,7 @@
 [ ![Download](https://api.bintray.com/packages/nikart/maven/FitButton/images/download.svg) ](https://bintray.com/nikart/maven/FitButton/_latestVersion) [![](https://jitpack.io/v/nikartm/FitButton.svg)](https://jitpack.io/#nikartm/FitButton)
 
+Support Android SDK 17+
+
 # FitButton
 The button which includes features:
 * Icon, 

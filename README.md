@@ -18,9 +18,9 @@ implementation 'com.github.nikartm:fit-button:1.1.1'
 ```
 
 ## Screenshots
-![FitButton Screenshots](/screenshots/img_gif.gif)![FitButton Screenshots](/screenshots/img_1.png)
+![FitButton Screenshots](/screenshots/img_gif.gif)
 
-![FitButton Screenshots](/screenshots/img_2.png)![FitButton Screenshots](/screenshots/img_3.png)
+![FitButton Screenshots](/screenshots/img_1.png) ![FitButton Screenshots](/screenshots/img_2.png) ![FitButton Screenshots](/screenshots/img_3.png)
 ## How to use?
 Adjust the XML view: 
 

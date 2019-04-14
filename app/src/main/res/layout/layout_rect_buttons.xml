@@ -30,7 +30,7 @@
             app:fb_backgroundColor="#37474F" />
 
         <com.github.nikartm.button.FitButton
-            android:layout_width="120dp"
+            android:layout_width="110dp"
             android:layout_height="70dp"
             android:layout_margin="16dp"
             app:fb_shape="rectangle"
@@ -42,8 +42,8 @@
             app:fb_iconColor="#283593"
             app:fb_icon="@drawable/ic_star"
             app:fb_iconVisibility="invisible"
-            app:fb_iconMarginStart="5dp"
-            app:fb_iconMarginEnd="5dp"
+            app:fb_iconMarginStart="2dp"
+            app:fb_iconMarginEnd="2dp"
             app:fb_text="First trip"
             app:fb_textStyle="bold"
             app:fb_textSize="16dp"
@@ -128,6 +128,7 @@
             android:layout_height="48dp"
             android:layout_margin="16dp"
             app:fb_shape="oval"
+            app:fb_rippleColor="#E1F5FE"
             app:fb_iconColor="#26C6DA"
             app:fb_iconWidth="40dp"
             app:fb_iconHeight="40dp"

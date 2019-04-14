@@ -14,7 +14,7 @@
         android:orientation="horizontal">
 
         <com.github.nikartm.button.FitButton
-            android:layout_width="100dp"
+            android:layout_width="200dp"
             android:layout_height="100dp"
             android:layout_margin="16dp"
             app:fb_backgroundColor="#5C6BC0"

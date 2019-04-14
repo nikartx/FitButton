@@ -14,7 +14,7 @@ The button which includes features:
 ## Installation
 #### Gradle
 ```
-implementation 'com.github.nikartm:fit-button:1.1.1'
+implementation "com.github.nikartm:fit-button:$fb_version"
 ```
 
 ## Screenshots

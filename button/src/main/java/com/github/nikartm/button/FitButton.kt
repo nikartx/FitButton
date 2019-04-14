@@ -35,6 +35,11 @@ class FitButton : LinearLayout {
         manager = DrawManager(this, attrs).drawButton()
     }
 
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+        manager.changeMeasure(widthMeasureSpec, heightMeasureSpec)
+    }
+
     /**
      * Get the button icon
      * @return icon [Drawable]

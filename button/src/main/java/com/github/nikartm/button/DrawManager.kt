@@ -39,6 +39,15 @@ internal class DrawManager constructor(view: FitButton, attrs : AttributeSet?) {
     }
 
     /**
+     * Resize button measure
+     * @param width new button width
+     * @param height new button height
+     */
+    fun changeMeasure(width: Int, height: Int) {
+        container.draw()
+    }
+
+    /**
      * @return [FButton] with attrs or default values
      */
     fun getButton() : FButton {

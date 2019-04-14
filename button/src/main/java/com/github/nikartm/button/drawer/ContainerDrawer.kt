@@ -49,6 +49,7 @@ internal class ContainerDrawer(val view: FitButton, val button: FButton)
                 button.btnColor,
                 button.rippleColor,
                 button.cornerRadius,
+                button.btnShape,
                 container)
     }
 

@@ -7,6 +7,7 @@ import android.graphics.drawable.RippleDrawable
 import android.graphics.drawable.StateListDrawable
 import android.os.Build
 import android.view.View
+import com.github.nikartm.button.model.Shape
 
 /**
  * Ripple effect for the [FitButton]
@@ -19,6 +20,7 @@ class RippleEffect {
         fun createRipple(view: View, enableRipple: Boolean = true,
                          normalColor: Int, rippleColor: Int,
                          corner: Float,
+                         shape: Shape,
                          container: GradientDrawable) {
 
             if (enableRipple) {
@@ -26,6 +28,10 @@ class RippleEffect {
                     val mask = GradientDrawable()
                     mask.cornerRadius = pxToDp(corner)
                     mask.setColor(Color.GRAY)
+                    mask.shape = when(shape) {
+                        Shape.RECTANGLE, Shape.SQUARE -> GradientDrawable.RECTANGLE
+                        else -> GradientDrawable.OVAL
+                    }
 
                     val colors = ColorStateList(arrayOf(intArrayOf(android.R.attr.state_enabled)),
                             intArrayOf(rippleColor))
@@ -39,6 +45,10 @@ class RippleEffect {
                     val pressed = GradientDrawable()
                     pressed.setColor(rippleColor)
                     pressed.cornerRadius = corner
+                    pressed.shape = when(shape) {
+                        Shape.RECTANGLE, Shape.SQUARE -> GradientDrawable.RECTANGLE
+                        else -> GradientDrawable.OVAL
+                    }
 
                     container.setColor(normalColor)
                     container.cornerRadius = corner

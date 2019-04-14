@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         fitButton = findViewById(R.id.fbtn)
         fitButton!!
                 .setTextFont(R.font.share_tech_regular)
+                .setWidth(200)
+                .setHeight(70)
                 .setTextSize(20f)
                 .setIconMarginStart(16f)
                 .setIconMarginEnd(12f)
@@ -46,6 +48,7 @@ class MainActivity : AppCompatActivity() {
     private fun changeButton() {
         fitButton?.setButtonShape(Shape.CIRCLE)
                 ?.setDividerVisibility(View.GONE)
+                ?.setTextVisibility(View.GONE)
     }
 
 }

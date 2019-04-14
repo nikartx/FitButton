@@ -45,6 +45,8 @@ data class FButton(
         var textVisibility: Int = View.VISIBLE,
         var textGravity: Int = Gravity.CENTER,
 
+        var width: Int = 0,
+        var height: Int = 0,
         var btnColor: Int = 0,
         var cornerRadius: Float = 0f,
         var enableRipple: Boolean = true,

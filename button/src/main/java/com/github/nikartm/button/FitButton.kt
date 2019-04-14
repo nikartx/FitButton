@@ -12,6 +12,7 @@ import androidx.core.content.res.ResourcesCompat
 import com.github.nikartm.button.model.IconPosition
 import com.github.nikartm.button.model.Shape
 import com.github.nikartm.button.util.dpToPx
+import com.github.nikartm.button.util.getDensity
 import com.github.nikartm.button.util.txtPxToSp
 
 /**
@@ -547,6 +548,28 @@ class FitButton : LinearLayout {
      */
     fun setTextGravity(textGravity: Int) : FitButton {
         manager.getButton().textGravity = textGravity
+        updateView()
+        return this
+    }
+
+    /**
+     * Set button width in dp
+     */
+    fun setWidth(width: Int) : FitButton {
+        val w = (width * getDensity()).toInt()
+        manager.getButton().width = w
+        layoutParams.width = w
+        updateView()
+        return this
+    }
+
+    /**
+     * Set button height in dp
+     */
+    fun setHeight(height: Int) : FitButton {
+        val h = (height * getDensity()).toInt()
+        manager.getButton().height = h
+        layoutParams.height = h
         updateView()
         return this
     }

@@ -5,6 +5,8 @@ import android.graphics.Typeface
 import android.util.AttributeSet
 import android.view.Gravity
 import android.view.View
+import android.view.ViewGroup.LayoutParams.MATCH_PARENT
+import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import com.github.nikartm.button.model.FButton
 import com.github.nikartm.button.model.IconPosition
 import com.github.nikartm.button.model.Shape
@@ -103,13 +105,15 @@ internal class AttributeController(private val view: View, private val attrs: At
                 textPaddingEnd,
                 textPaddingBottom,
                 fontRes,
-                null,
+                Typeface.DEFAULT,
                 textStyle,
                 textSize,
                 textColor,
                 textAllCaps,
                 textVisibility,
                 textGravity,
+                MATCH_PARENT,
+                WRAP_CONTENT,
                 btnColor,
                 cornerRadius,
                 enableRipple,

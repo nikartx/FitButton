@@ -7,8 +7,8 @@ import com.github.nikartm.button.FitButton
 import com.github.nikartm.button.model.FButton
 import com.github.nikartm.button.model.IconPosition
 import com.github.nikartm.button.model.Shape
-import com.github.nikartm.button.util.pxToDp
 import com.github.nikartm.button.util.RippleEffect
+import com.github.nikartm.button.util.pxToDp
 
 /**
  * Drawing the FitButton view container
@@ -71,14 +71,27 @@ internal class ContainerDrawer(val view: FitButton, val button: FButton)
         }
     }
 
-    // Align a shape sides by a min side
+    // Align shape sides
     private fun alignSides(shape: Int) : Int {
-        val min = Math.min(view.measuredWidth, view.measuredHeight)
+        val dimension = if (view.layoutParams != null) {
+            defineFitSide(view.layoutParams.width, view.layoutParams.height)
+        } else {
+            defineFitSide(view.measuredWidth, view.measuredHeight)
+        }
         if (view.layoutParams != null) {
-            view.layoutParams.width = min
-            view.layoutParams.height = min
+            view.layoutParams.width = dimension
+            view.layoutParams.height = dimension
         }
         return shape
+    }
+
+    // Get a min side or a max side if anyone side equal zero or less
+    private fun defineFitSide(w: Int, h: Int) : Int {
+        return if (w <= 0 || h <= 0) {
+            Math.max(w, h)
+        } else {
+            Math.min(w, h)
+        }
     }
 
 }

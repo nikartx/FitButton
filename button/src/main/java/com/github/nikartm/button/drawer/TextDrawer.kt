@@ -4,7 +4,6 @@ import android.graphics.Typeface
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
-import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -33,12 +32,9 @@ internal class TextDrawer(val view: FitButton, val button: FButton)
 
     private fun initText() {
         tv = TextView(view.context)
-        if (view.orientation == LinearLayout.HORIZONTAL) {
-            tv.layoutParams = LinearLayout.LayoutParams(WRAP_CONTENT, MATCH_PARENT, 1f)
-        } else {
-            tv.layoutParams = LinearLayout.LayoutParams(MATCH_PARENT, WRAP_CONTENT, 1f)
-        }
+        tv.layoutParams = LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
         tv.text = button.text
+        tv.includeFontPadding = false
         tv.textSize = button.textSize / getDensity()
         tv.setTextColor(button.textColor)
         tv.isAllCaps = button.textAllCaps

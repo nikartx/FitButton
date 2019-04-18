@@ -1,6 +1,5 @@
 package com.github.nikartm.button.drawer
 
-import android.text.TextUtils
 import android.view.View
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.ImageView
@@ -32,7 +31,7 @@ internal class IconDrawer(val view: FitButton, val button: FButton)
         iv.setImageDrawable(button.icon)
         iv.setColorFilter(button.iconColor)
         iv.visibility = button.iconVisibility
-        val iconParams = LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT, getWeight())
+        val iconParams = LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
         iconParams.width = button.iconWidth.toInt()
         iconParams.height = button.iconHeight.toInt()
         iconParams.marginStart = button.iconMarginStart.toInt()
@@ -42,16 +41,6 @@ internal class IconDrawer(val view: FitButton, val button: FButton)
         iconParams.gravity = button.gravity
         iv.layoutParams = iconParams
         return iv
-    }
-
-    // Get layout weight dependent on the layout orientation and a text state
-    private fun getWeight() : Float {
-        return when(view.orientation) {
-            LinearLayout.VERTICAL -> {
-                if (TextUtils.isEmpty(button.text)) 0f else 1f
-            }
-            else -> 0f
-        }
     }
 
 }

@@ -31,13 +31,13 @@
             app:fb_iconWidth="28dp"
             app:fb_iconHeight="28dp"
             app:fb_iconPosition="left"
+            app:fb_gravity="start|center"
             app:fb_iconMarginStart="20dp"
             app:fb_iconMarginEnd="16dp"
             app:fb_icon="@drawable/ic_thumb_up"
             app:fb_iconColor="#FFF"
             app:fb_textPaddingStart="16dp"
             app:fb_textColor="#FFF"
-            app:fb_textGravity="start|center"
             app:fb_text="Like Me"
             app:fb_backgroundColor="#FF7043"/>
 

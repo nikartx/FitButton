@@ -23,10 +23,9 @@
             app:fb_shape="square"
             app:fb_iconColor="#FFF"
             app:fb_text="Start"
+            app:fb_textPaddingTop="5dp"
             app:fb_iconPosition="top"
-            app:fb_textGravity="top|center"
             app:fb_textColor="#FFF"
-            app:fb_iconMarginTop="5dp"
             app:fb_icon="@drawable/ic_timer"/>
 
         <com.github.nikartm.button.FitButton

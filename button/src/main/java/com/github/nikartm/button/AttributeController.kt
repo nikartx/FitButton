@@ -75,7 +75,6 @@ internal class AttributeController(private val view: View, private val attrs: At
         val enableRipple = typedArray.getBoolean(R.styleable.FitButton_fb_enableRipple, true)
         val rippleColor = typedArray.getColor(R.styleable.FitButton_fb_rippleColor, Color.parseColor("#42FFFFFF"))
         val shape = typedArray.getInt(R.styleable.FitButton_fb_shape, Shape.RECTANGLE.shape)
-        val gravity = typedArray.getInt(R.styleable.FitButton_fb_gravity, Gravity.CENTER)
         val enable = typedArray.getBoolean(R.styleable.FitButton_android_enabled, true)
         val borderColor = typedArray.getColor(R.styleable.FitButton_fb_borderColor, Color.TRANSPARENT)
         val borderWidth = typedArray.getDimension(R.styleable.FitButton_fb_borderWidth, 0f)
@@ -117,7 +116,6 @@ internal class AttributeController(private val view: View, private val attrs: At
                 enableRipple,
                 rippleColor,
                 Shape.values().first { s -> s.shape == shape },
-                gravity,
                 enable,
                 borderColor,
                 borderWidth)

@@ -70,13 +70,6 @@
             <enum name="circle" value="2" />
             <enum name="oval" value="3" />
         </attr>
-        <attr name="fb_gravity">
-            <flag name="top" value="0x30" />
-            <flag name="bottom" value="0x50" />
-            <flag name="center" value="0x11" />
-            <flag name="start" value="0x00800003" />
-            <flag name="end" value="0x00800005" />
-        </attr>
         <attr name="android:enabled" format="boolean" />
 
         <!-- Border -->

@@ -4,7 +4,6 @@ import android.content.Context
 import android.graphics.Typeface
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
-import android.view.Gravity
 import android.view.View
 import android.widget.LinearLayout
 import androidx.annotation.FontRes
@@ -635,25 +634,16 @@ class FitButton : LinearLayout {
 
     /**
      * Get the button gravity
-     * Values currently available for use:
-     * [Gravity] top, bottom, center, start, end
-     * By default using [Gravity.CENTER]
-     * Affects all elements inside the button
-     * @return button gravity [Int]
      */
-    fun getButtonGravity() : Int = manager.getButton().gravity
+    override fun getGravity(): Int {
+        return super.getGravity()
+    }
 
     /**
-     * Set the button gravity
-     * Values currently available for use values:
-     * [Gravity] top, bottom, center, start, end
-     * Affects all elements inside the button
-     * @param gravity [Int]
+     * Set gravity for elements of the button
      */
-    fun setButtonGravity(gravity: Int) : FitButton {
-        manager.getButton().gravity = gravity
-        updateView()
-        return this
+    override fun setGravity(gravity: Int) {
+        super.setGravity(gravity)
     }
 
     /**

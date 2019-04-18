@@ -35,7 +35,6 @@ internal class ContainerDrawer(val view: FitButton, val button: FButton)
         container.cornerRadius = pxToDp(button.cornerRadius)
         container.setColor(button.btnColor)
         container.setStroke(button.borderWidth.toInt(), button.borderColor)
-        view.gravity = button.gravity
         addRipple()
     }
 

@@ -38,7 +38,6 @@ internal class IconDrawer(val view: FitButton, val button: FButton)
         iconParams.topMargin = button.iconMarginTop.toInt()
         iconParams.marginEnd = button.iconMarginEnd.toInt()
         iconParams.bottomMargin = button.iconMarginBottom.toInt()
-        iconParams.gravity = button.gravity
         iv.layoutParams = iconParams
         return iv
     }

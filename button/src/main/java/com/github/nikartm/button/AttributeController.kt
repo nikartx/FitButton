@@ -104,7 +104,7 @@ internal class AttributeController(private val view: View, private val attrs: At
                 textPaddingEnd,
                 textPaddingBottom,
                 fontRes,
-                Typeface.DEFAULT,
+                null,
                 textStyle,
                 textSize,
                 textColor,

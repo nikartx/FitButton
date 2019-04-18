@@ -532,27 +532,6 @@ class FitButton : LinearLayout {
     }
 
     /**
-     * Get the button text gravity
-     * Values currently available for use values:
-     * [Gravity] top, bottom, center, start, end
-     * By default using [Gravity.CENTER]
-     * @return text gravity [Int]
-     */
-    fun getTextGravity() : Int = manager.getButton().textGravity
-
-    /**
-     * Set the button text gravity
-     * Values currently available for use values:
-     * [Gravity] top, bottom, center, start, end
-     * @param textGravity [Int]
-     */
-    fun setTextGravity(textGravity: Int) : FitButton {
-        manager.getButton().textGravity = textGravity
-        updateView()
-        return this
-    }
-
-    /**
      * Set button width in dp
      */
     fun setWidth(width: Int) : FitButton {

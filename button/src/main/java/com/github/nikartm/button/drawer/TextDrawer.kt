@@ -39,7 +39,6 @@ internal class TextDrawer(val view: FitButton, val button: FButton)
         tv.setTextColor(button.textColor)
         tv.isAllCaps = button.textAllCaps
         tv.visibility = button.textVisibility
-        tv.gravity = button.textGravity
         tv.setPadding(button.textPaddingStart.toInt(), button.textPaddingTop.toInt(),
                 button.textPaddingEnd.toInt(), button.textPaddingBottom.toInt())
         setTypeface()

@@ -68,7 +68,6 @@ internal class AttributeController(private val view: View, private val attrs: At
         val textColor = typedArray.getColor(R.styleable.FitButton_fb_textColor, Color.DKGRAY)
         val textAllCaps = typedArray.getBoolean(R.styleable.FitButton_fb_textAllCaps, false)
         val textVisibility = typedArray.getInt(R.styleable.FitButton_fb_textVisibility, View.VISIBLE)
-        val textGravity = typedArray.getInt(R.styleable.FitButton_fb_textGravity, Gravity.CENTER)
 
         // Init button
         val btnColor = typedArray.getColor(R.styleable.FitButton_fb_backgroundColor, 0)
@@ -111,7 +110,6 @@ internal class AttributeController(private val view: View, private val attrs: At
                 textColor,
                 textAllCaps,
                 textVisibility,
-                textGravity,
                 MATCH_PARENT,
                 WRAP_CONTENT,
                 btnColor,

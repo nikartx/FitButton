@@ -32,6 +32,7 @@ Adjust the XML view:
     android:layout_height="58dp"
     android:layout_margin="32dp"
     android:enabled="true"
+    android:gravity="center_vertical"
     app:fb_cornerRadius="2dp"
     app:fb_shape="rectangle"
     app:fb_divColor="#fff"
@@ -41,13 +42,12 @@ Adjust the XML view:
     app:fb_iconWidth="28dp"
     app:fb_iconHeight="28dp"
     app:fb_iconPosition="left"
-    app:fb_iconMarginStart="30dp"
+    app:fb_iconMarginStart="20dp"
     app:fb_iconMarginEnd="16dp"
     app:fb_icon="@drawable/ic_thumb_up"
-    app:fb_iconColor="#FBE9E7"
+    app:fb_iconColor="#FFF"
     app:fb_textPaddingStart="16dp"
     app:fb_textColor="#FFF"
-    app:fb_textGravity="start|center"
     app:fb_text="Like Me"
     app:fb_backgroundColor="#FF7043"/>
 ```
@@ -57,11 +57,13 @@ private fun setupButton() {
     fitButton = findViewById(R.id.fbtn)
     fitButton!!
             .setTextFont(R.font.share_tech_regular)
+            .setWidth(250)
+            .setHeight(70)
             .setTextSize(20f)
             .setIconMarginStart(16f)
             .setIconMarginEnd(12f)
             .setTextColor(Color.parseColor("#F5F5F5"))
-            .setIconColor(Color.parseColor("#FFE0B2"))
+            .setIconColor(Color.parseColor("#FFFFFF"))
             .setDividerColor(Color.parseColor("#BCAAA4"))
             .setBorderColor(Color.parseColor("#FFF59D"))
             .setButtonColor(Color.parseColor("#FF7043"))

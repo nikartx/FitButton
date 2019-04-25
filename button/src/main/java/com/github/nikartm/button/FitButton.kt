@@ -3,10 +3,12 @@ package com.github.nikartm.button
 import android.content.Context
 import android.graphics.Typeface
 import android.graphics.drawable.Drawable
+import android.os.Build
 import android.util.AttributeSet
 import android.view.View
 import android.widget.LinearLayout
 import androidx.annotation.FontRes
+import androidx.annotation.RequiresApi
 import androidx.annotation.StringRes
 import androidx.core.content.res.ResourcesCompat
 import com.github.nikartm.button.model.IconPosition
@@ -718,6 +720,24 @@ class FitButton : LinearLayout {
      */
     fun setBorderWidth(borderWidth: Float) : FitButton {
         manager!!.getButton().borderWidth = dpToPx(borderWidth)
+        updateView()
+        return this
+    }
+
+    /**
+     * Get shadow elevation
+     * @return elevation [Float]
+     */
+    fun getShadow(): Float = manager!!.getButton().elevation
+
+    /**
+     * Set shadow elevation
+     * Support SDK Lollipop+
+     * @param elevation [Float]
+     */
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
+    fun setShadow(elevation: Float) : FitButton {
+        manager!!.getButton().elevation = dpToPx(elevation)
         updateView()
         return this
     }

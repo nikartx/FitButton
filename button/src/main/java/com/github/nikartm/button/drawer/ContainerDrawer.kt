@@ -1,6 +1,7 @@
 package com.github.nikartm.button.drawer
 
 import android.graphics.drawable.GradientDrawable
+import android.os.Build
 import android.view.View
 import android.widget.LinearLayout
 import com.github.nikartm.button.FitButton
@@ -33,6 +34,9 @@ internal class ContainerDrawer(val view: FitButton, val button: FButton)
     private fun initContainer() {
         container = GradientDrawable()
         container.cornerRadius = pxToDp(button.cornerRadius)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            view.elevation = button.elevation
+        }
         setButtonColor()
         addRipple()
     }

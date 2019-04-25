@@ -570,6 +570,38 @@ class FitButton : LinearLayout {
     }
 
     /**
+     * Get the disabled background and border color of the button
+     * @return disabled color [Int]
+     */
+    fun getDisabledColor() : Int = manager!!.getButton().disableColor
+
+    /**
+     * Set the button disabled background and border color
+     * @param color [Int]
+     */
+    fun setDisabledButtonColor(color: Int) : FitButton {
+        manager!!.getButton().disableColor = color
+        updateView()
+        return this
+    }
+
+    /**
+     * Get the disabled color of button elements
+     * @return disabled color [Int]
+     */
+    fun getElementsDisabledColor() : Int = manager!!.getButton().elementsDisableColor
+
+    /**
+     * Set the disabled color of button elements
+     * @param color [Int]
+     */
+    fun setElementsDisabledButtonColor(color: Int) : FitButton {
+        manager!!.getButton().elementsDisableColor = color
+        updateView()
+        return this
+    }
+
+    /**
      * Get the button corner radius
      * @return button corner radius [Float]
      */

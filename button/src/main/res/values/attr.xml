@@ -61,6 +61,8 @@
 
         <!-- Button -->
         <attr name="fb_backgroundColor" format="color|reference" />
+        <attr name="fb_disableColor" format="color|reference" />
+        <attr name="fb_disableElementsColor" format="color|reference" />
         <attr name="fb_cornerRadius" format="dimension" />
         <attr name="fb_enableRipple" format="boolean" />
         <attr name="fb_rippleColor" format="color|reference" />

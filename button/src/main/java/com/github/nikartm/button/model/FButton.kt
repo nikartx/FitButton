@@ -46,6 +46,8 @@ data class FButton(
         var width: Int = 0,
         var height: Int = 0,
         var btnColor: Int = 0,
+        var disableColor: Int = 0,
+        var elementsDisableColor: Int = 0,
         var cornerRadius: Float = 0f,
         var enableRipple: Boolean = true,
         var rippleColor: Int = 0,

@@ -3,7 +3,6 @@ package com.github.nikartm.button
 import android.graphics.Color
 import android.graphics.Typeface
 import android.util.AttributeSet
-import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup.LayoutParams.MATCH_PARENT
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
@@ -71,6 +70,8 @@ internal class AttributeController(private val view: View, private val attrs: At
 
         // Init button
         val btnColor = typedArray.getColor(R.styleable.FitButton_fb_backgroundColor, 0)
+        val disableColor = typedArray.getColor(R.styleable.FitButton_fb_disableColor, 0)
+        val elDisableColor = typedArray.getColor(R.styleable.FitButton_fb_disableElementsColor, 0)
         val cornerRadius = typedArray.getDimension(R.styleable.FitButton_fb_cornerRadius, 0f)
         val enableRipple = typedArray.getBoolean(R.styleable.FitButton_fb_enableRipple, true)
         val rippleColor = typedArray.getColor(R.styleable.FitButton_fb_rippleColor, Color.parseColor("#42FFFFFF"))
@@ -112,6 +113,8 @@ internal class AttributeController(private val view: View, private val attrs: At
                 MATCH_PARENT,
                 WRAP_CONTENT,
                 btnColor,
+                disableColor,
+                elDisableColor,
                 cornerRadius,
                 enableRipple,
                 rippleColor,

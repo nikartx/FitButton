@@ -27,4 +27,9 @@ internal abstract class Drawer<V, T> constructor(private val view: V, private va
      */
     open fun getAlpha() : Float = MAX_ALPHA * ALPHA_PERCENTS / 100f
 
+    /**
+     * Methods to update draw elements
+     */
+    abstract fun updateLayout()
+
 }

@@ -7,6 +7,7 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.LinearLayout
 import androidx.annotation.FontRes
+import androidx.annotation.StringRes
 import androidx.core.content.res.ResourcesCompat
 import com.github.nikartm.button.model.IconPosition
 import com.github.nikartm.button.model.Shape
@@ -351,6 +352,16 @@ class FitButton : LinearLayout {
      */
     fun setText(text: String?) : FitButton {
         manager!!.getButton().text = text
+        updateView()
+        return this
+    }
+
+    /**
+     * Set the button text using string res Id
+     * @param resId [String]
+     */
+    fun setText(@StringRes resId: Int) : FitButton {
+        manager!!.getButton().text = resources.getString(resId)
         updateView()
         return this
     }

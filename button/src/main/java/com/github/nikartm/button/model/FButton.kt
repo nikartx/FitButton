@@ -54,5 +54,6 @@ data class FButton(
         var btnShape: Shape = Shape.RECTANGLE,
         var enable: Boolean = true,
         var borderColor: Int = 0,
-        var borderWidth: Float = 0f
+        var borderWidth: Float = 0f,
+        var elevation: Float = 0f
 )

@@ -73,6 +73,7 @@
             <enum name="oval" value="3" />
         </attr>
         <attr name="android:enabled" format="boolean" />
+        <attr name="fb_shadow" format="dimension" />
 
         <!-- Border -->
         <attr name="fb_borderColor" format="color" />

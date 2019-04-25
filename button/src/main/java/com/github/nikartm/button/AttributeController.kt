@@ -9,6 +9,7 @@ import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import com.github.nikartm.button.model.FButton
 import com.github.nikartm.button.model.IconPosition
 import com.github.nikartm.button.model.Shape
+import com.github.nikartm.button.util.dpToPx
 import com.github.nikartm.button.util.txtPxToSp
 
 /**
@@ -79,6 +80,7 @@ internal class AttributeController(private val view: View, private val attrs: At
         val enable = typedArray.getBoolean(R.styleable.FitButton_android_enabled, true)
         val borderColor = typedArray.getColor(R.styleable.FitButton_fb_borderColor, Color.TRANSPARENT)
         val borderWidth = typedArray.getDimension(R.styleable.FitButton_fb_borderWidth, 0f)
+        val elevation = typedArray.getDimension(R.styleable.FitButton_fb_shadow, dpToPx(2f))
 
         button = FButton(icon,
                 iconColor,
@@ -121,7 +123,8 @@ internal class AttributeController(private val view: View, private val attrs: At
                 Shape.values().first { s -> s.shape == shape },
                 enable,
                 borderColor,
-                borderWidth)
+                borderWidth,
+                elevation)
 
         typedArray.recycle()
     }

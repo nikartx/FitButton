@@ -33,10 +33,28 @@ internal class ContainerDrawer(val view: FitButton, val button: FButton)
     private fun initContainer() {
         container = GradientDrawable()
         container.cornerRadius = pxToDp(button.cornerRadius)
-        container.setColor(button.btnColor)
-        container.setStroke(button.borderWidth.toInt(), button.borderColor)
+        setButtonColor()
         addRipple()
     }
+
+    private fun setButtonColor() {
+        if (!button.enable) {
+            if (button.disableColor != 0) {
+                container.setColor(button.disableColor)
+                container.setStroke(button.borderWidth.toInt(), button.disableColor)
+            } else {
+                container.setColor(button.btnColor)
+                container.setStroke(button.borderWidth.toInt(), button.borderColor)
+                container.alpha = getAlpha().toInt()
+            }
+        } else {
+            container.setColor(button.btnColor)
+            container.setStroke(button.borderWidth.toInt(), button.borderColor)
+        }
+    }
+
+    // GradientDrawable get the alpha value range 0 - 255, so the method should be override
+    override fun getAlpha(): Float = MAX_ALPHA * (1 - (ALPHA_PERCENTS.toFloat() / 100))
 
     // Add a ripple effect for the button if it was enabled
     private fun addRipple() {

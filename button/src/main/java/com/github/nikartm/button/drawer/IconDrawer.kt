@@ -29,8 +29,9 @@ internal class IconDrawer(val view: FitButton, val button: FButton)
     private fun initIcon() : ImageView {
         iv = ImageView(view.context)
         iv.setImageDrawable(button.icon)
-        iv.setColorFilter(button.iconColor)
         iv.visibility = button.iconVisibility
+        setColor()
+
         val iconParams = LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
         iconParams.width = button.iconWidth.toInt()
         iconParams.height = button.iconHeight.toInt()
@@ -40,6 +41,19 @@ internal class IconDrawer(val view: FitButton, val button: FButton)
         iconParams.bottomMargin = button.iconMarginBottom.toInt()
         iv.layoutParams = iconParams
         return iv
+    }
+
+    private fun setColor() {
+        if (!button.enable) {
+            if (button.elementsDisableColor != 0) {
+                iv.setColorFilter(button.elementsDisableColor)
+            } else {
+                iv.setColorFilter(button.iconColor)
+                iv.alpha = getAlpha()
+            }
+        } else {
+            iv.setColorFilter(button.iconColor)
+        }
     }
 
 }

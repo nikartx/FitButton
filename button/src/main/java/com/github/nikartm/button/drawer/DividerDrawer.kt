@@ -29,7 +29,6 @@ internal class DividerDrawer(val view: FitButton, val button: FButton)
 
     private fun initDivider() {
         div = View(view.context)
-        div.setBackgroundColor(button.divColor)
         div.visibility = button.divVisibility
         divParams = ViewGroup.MarginLayoutParams(WRAP_CONTENT, WRAP_CONTENT)
         divParams.marginStart = button.divMarginStart.toInt()
@@ -37,7 +36,21 @@ internal class DividerDrawer(val view: FitButton, val button: FButton)
         divParams.marginEnd = button.divMarginEnd.toInt()
         divParams.bottomMargin = button.divMarginBottom.toInt()
         setMeasure()
+        setColor()
         div.layoutParams = divParams
+    }
+
+    private fun setColor() {
+        if (!button.enable) {
+            if (button.elementsDisableColor != 0) {
+                div.setBackgroundColor(button.elementsDisableColor)
+            } else {
+                div.setBackgroundColor(button.divColor)
+                div.alpha = getAlpha()
+            }
+        } else {
+            div.setBackgroundColor(button.divColor)
+        }
     }
 
     // Set the divider measure if a shape of the button was changed

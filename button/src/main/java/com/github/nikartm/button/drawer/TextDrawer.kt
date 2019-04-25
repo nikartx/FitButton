@@ -36,12 +36,26 @@ internal class TextDrawer(val view: FitButton, val button: FButton)
         tv.text = button.text
         tv.includeFontPadding = false
         tv.textSize = button.textSize / getDensity()
-        tv.setTextColor(button.textColor)
         tv.isAllCaps = button.textAllCaps
         tv.visibility = button.textVisibility
         tv.setPadding(button.textPaddingStart.toInt(), button.textPaddingTop.toInt(),
                 button.textPaddingEnd.toInt(), button.textPaddingBottom.toInt())
+
+        setColor()
         setTypeface()
+    }
+
+    private fun setColor() {
+        if (!button.enable) {
+            if (button.elementsDisableColor != 0) {
+                tv.setTextColor(button.elementsDisableColor)
+            } else {
+                tv.setTextColor(button.textColor)
+                tv.alpha = getAlpha()
+            }
+        } else {
+            tv.setTextColor(button.textColor)
+        }
     }
 
     private fun setTypeface() {

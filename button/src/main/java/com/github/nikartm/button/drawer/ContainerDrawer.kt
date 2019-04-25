@@ -111,4 +111,8 @@ internal class ContainerDrawer(val view: FitButton, val button: FButton)
         }
     }
 
+    override fun updateLayout() {
+        draw()
+    }
+
 }

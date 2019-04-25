@@ -15,8 +15,7 @@ import com.github.nikartm.button.model.Shape
 internal class DividerDrawer(val view: FitButton, val button: FButton)
     : Drawer<FitButton, FButton>(view, button) {
 
-    private lateinit var div: View
-    private lateinit var divParams: ViewGroup.MarginLayoutParams
+    private var div: View = View(view.context)
 
     override fun draw() {
         initDivider()
@@ -28,14 +27,13 @@ internal class DividerDrawer(val view: FitButton, val button: FButton)
     }
 
     private fun initDivider() {
-        div = View(view.context)
         div.visibility = button.divVisibility
-        divParams = ViewGroup.MarginLayoutParams(WRAP_CONTENT, WRAP_CONTENT)
+        val divParams = LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
         divParams.marginStart = button.divMarginStart.toInt()
         divParams.topMargin = button.divMarginTop.toInt()
         divParams.marginEnd = button.divMarginEnd.toInt()
         divParams.bottomMargin = button.divMarginBottom.toInt()
-        setMeasure()
+        setMeasure(divParams)
         setColor()
         div.layoutParams = divParams
     }
@@ -54,7 +52,7 @@ internal class DividerDrawer(val view: FitButton, val button: FButton)
     }
 
     // Set the divider measure if a shape of the button was changed
-    private fun setMeasure() {
+    private fun setMeasure(divParams: ViewGroup.MarginLayoutParams) {
         val minMeasure = Math.min(view.measuredWidthAndState, view.measuredHeightAndState)
         val borderMeasure = (button.borderWidth * 2f).toInt()
         if (button.divHeight == 0f && view.orientation == LinearLayout.HORIZONTAL) {
@@ -62,7 +60,7 @@ internal class DividerDrawer(val view: FitButton, val button: FButton)
                 Shape.SQUARE, Shape.CIRCLE -> minMeasure
                 else -> view.measuredHeightAndState
             }
-            divParams.height = (wMeas - borderMeasure)
+            divParams.height = wMeas - borderMeasure
         } else {
             divParams.height = button.divHeight.toInt()
         }
@@ -71,10 +69,14 @@ internal class DividerDrawer(val view: FitButton, val button: FButton)
                 Shape.SQUARE, Shape.CIRCLE -> minMeasure
                 else -> view.measuredWidthAndState
             }
-            divParams.width = (hMeas - borderMeasure)
+            divParams.width = hMeas - borderMeasure
         } else {
             divParams.width = button.divWidth.toInt()
         }
+    }
+
+    override fun updateLayout() {
+        initDivider()
     }
 
 }

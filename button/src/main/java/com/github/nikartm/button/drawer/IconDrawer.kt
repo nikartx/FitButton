@@ -14,7 +14,7 @@ import com.github.nikartm.button.model.FButton
 internal class IconDrawer(val view: FitButton, val button: FButton)
     : Drawer<FitButton, FButton>(view, button) {
 
-    private lateinit var iv: ImageView
+    private var iv: ImageView = ImageView(view.context)
 
     override fun draw() {
         initIcon()
@@ -27,7 +27,6 @@ internal class IconDrawer(val view: FitButton, val button: FButton)
 
     // Prepare icon to the drawing
     private fun initIcon() : ImageView {
-        iv = ImageView(view.context)
         iv.setImageDrawable(button.icon)
         iv.visibility = button.iconVisibility
         setColor()
@@ -54,6 +53,10 @@ internal class IconDrawer(val view: FitButton, val button: FButton)
         } else {
             iv.setColorFilter(button.iconColor)
         }
+    }
+
+    override fun updateLayout() {
+        initIcon()
     }
 
 }

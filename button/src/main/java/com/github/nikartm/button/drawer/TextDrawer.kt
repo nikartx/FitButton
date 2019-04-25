@@ -19,7 +19,7 @@ import com.github.nikartm.button.util.getDensity
 internal class TextDrawer(val view: FitButton, val button: FButton)
     : Drawer<FitButton, FButton>(view, button) {
 
-    private lateinit var tv: TextView
+    private var tv: TextView = TextView(view.context)
 
     override fun draw() {
         initText()
@@ -31,7 +31,6 @@ internal class TextDrawer(val view: FitButton, val button: FButton)
     }
 
     private fun initText() {
-        tv = TextView(view.context)
         tv.layoutParams = LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
         tv.text = button.text
         tv.includeFontPadding = false
@@ -73,6 +72,10 @@ internal class TextDrawer(val view: FitButton, val button: FButton)
                 }
             }
         }
+    }
+
+    override fun updateLayout() {
+        initText()
     }
 
 }

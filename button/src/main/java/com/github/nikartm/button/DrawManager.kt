@@ -32,10 +32,9 @@ internal class DrawManager constructor(view: FitButton, attrs : AttributeSet?) {
     /**
      * Draw customized [FitButton] on [View]
      */
-    fun drawButton() : DrawManager {
+    fun drawButton() {
         container.draw()
         defineDrawingOrder()
-        return this
     }
 
     /**
@@ -44,7 +43,7 @@ internal class DrawManager constructor(view: FitButton, attrs : AttributeSet?) {
      * @param height new button height
      */
     fun changeMeasure(width: Int, height: Int) {
-        container.draw()
+        updateViews()
     }
 
     /**
@@ -79,6 +78,16 @@ internal class DrawManager constructor(view: FitButton, attrs : AttributeSet?) {
                 text.draw()
             }
         }
+    }
+
+    /**
+     * Update the button layouts and it elements
+     */
+    fun updateViews() {
+        container.updateLayout()
+        text.updateLayout()
+        icon.updateLayout()
+        divider.updateLayout()
     }
 
 }

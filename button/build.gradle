@@ -1,6 +1,24 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
+ext {
+    PUBLISH_GROUP_ID = 'io.github.nikartm'
+    PUBLISH_VERSION = '2.0.0'
+    PUBLISH_ARTIFACT_ID = 'fit-button'
+    PUBLISH_DESCRIPTION = 'A button that can be used with an icon, text, separator, and custom ripple effect.'
+    PUBLISH_URL = 'https://github.com/nikartm/FitButton'
+    PUBLISH_LICENSE_NAME = 'The Apache Software License, Version 2.0'
+    PUBLISH_LICENSE_URL = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    PUBLISH_DEVELOPER_ID = 'ivanv'
+    PUBLISH_DEVELOPER_NAME = 'Ivan Vodyasov'
+    PUBLISH_DEVELOPER_EMAIL = 'jvissun@gmail.com'
+    PUBLISH_SCM_CONNECTION = 'scm:git:github.com/nikartm/FitButton.git'
+    PUBLISH_SCM_DEVELOPER_CONNECTION = 'scm:git:ssh://github.com/nikartm/FitButton.git'
+    PUBLISH_SCM_URL = 'https://github.com/nikartm/FitButton/tree/master'
+}
+
+apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {

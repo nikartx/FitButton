@@ -1,53 +1,35 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
-apply plugin: 'com.novoda.bintray-release'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion rootProject.ext.compileSdkVersion
     defaultConfig {
-        minSdkVersion 17
-        targetSdkVersion 28
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.2.1"
+        versionName "1.0"
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-}
 
-repositories {
-    mavenCentral()
-}
-
-allprojects {
-    tasks.withType(Javadoc).all { enabled = false }
-}
-
-if (JavaVersion.current().isJava8Compatible()) {
-    allprojects {
-        tasks.withType(Javadoc) {
-            options.addStringOption('Xdoclint:none', '-quiet')
-        }
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
-}
 
-publish {
-    userOrg = 'nikart'
-    groupId = 'com.github.nikartm'
-    artifactId = 'fit-button'
-    publishVersion = android.defaultConfig.versionName
-    desc = 'The button which can use with icon, text, divider and custom ripple effect'
-    licences = ['Apache-2.0']
-    uploadName='FitButton'
-    website = 'https://github.com/nikartm/FitButton'
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    testImplementation 'junit:junit:4.12'
-    implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation rootProject.ext.dependencies.coreKtx
 }

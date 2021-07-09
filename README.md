@@ -1,4 +1,4 @@
-[![Download](https://api.bintray.com/packages/nikart/maven/FitButton/images/download.svg) ](https://bintray.com/nikart/maven/FitButton/_latestVersion) [![](https://jitpack.io/v/nikartm/FitButton.svg)](https://jitpack.io/#nikartm/FitButton) [![API](https://img.shields.io/badge/API-17%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=17) [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-FitButton-green.svg?style=flat )]( https://android-arsenal.com/details/1/7620 ) [![Donate using PayPal](https://img.shields.io/badge/paypal-donate-blue.svg) ](https://www.paypal.me/ivodyasov)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.nikartm/fit-button.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.github.nikartm%22%20AND%20a:%22fit-button%22) [![API](https://img.shields.io/badge/API-17%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=17) [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-FitButton-green.svg?style=flat )]( https://android-arsenal.com/details/1/7620 )
 
 # FitButton
 The button which includes features:
@@ -11,10 +11,31 @@ The button which includes features:
 * Custom elements sizes,
 * Custom colors of elements,
 * Different positions of elements on the button
+
 ## Installation
-#### Gradle
+#### Download
+Add to gradle root:
 ```
-implementation "com.github.nikartm:fit-button:$fb_version"
+allprojects {
+  repositories {
+    mavenCentral()
+  }
+}
+```
+
+#### After migrating to MavenCentral, use Groove:
+```
+implementation 'io.github.nikartm:fit-button:2.0.0'
+```
+Or Kotlin DSL:
+```
+implementation("io.github.nikartm:fit-button:2.0.0")
+```
+Or take a different [approach](https://search.maven.org/artifact/io.github.nikartm/fit-button/2.0.0/aar)
+
+Old way (deprecated):
+```
+implementation 'com.github.nikartm:fit-button:$LAST_VERSION'
 ```
 
 ## Screenshots
@@ -75,25 +96,6 @@ private fun setupButton() {
                         "Click on ${fitButton?.getText()}",
                         Toast.LENGTH_SHORT).show()
             }
-}
-```
-
-## Kotlin support
-If you got an error
-```
-Caused by: java.lang.NoClassDefFoundError: Failed resolution of: Lkotlin/jvm/internal/Intrinsics;
-```
-
-You may need to add Kotlin support to your project.
-```
-implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-```
-and add to the root build.gradle
-```
-buildscript {
-    ext.kotlin_version = 'X.Y.Z'
-    
-    ...
 }
 ```
 
